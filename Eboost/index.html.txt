@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título enfocado en el resultado: rendimiento y enfoque -->
+    <title>Desbloquea tu Máximo Rendimiento: Energía y Enfoque Sin Límites</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- ESTILO HORMOZI: Colores alineados con la marca E-BOOST --- */
+        :root {
+            --color-primario: #111111;
+            --color-secundario: #f9f9f9;
+            /* Color de acento principal extraído de la marca E-BOOST */
+            --color-acento: #F37021; 
+            --color-texto: #333;
+            --color-blanco: #ffffff;
+            --fuente-titulos: 'Oswald', sans-serif;
+            --fuente-cuerpo: 'Roboto', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--fuente-cuerpo);
+            color: var(--color-texto);
+            background-color: var(--color-blanco);
+            line-height: 1.7;
+            /* Espacio en la parte inferior para que el botón fijo no tape el contenido */
+            padding-bottom: 100px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+        
+        /* --- BOTÓN DE ACCIÓN (CTA): GRANDE, CLARO, CON COLOR DE MARCA --- */
+        .cta-button {
+            display: inline-block;
+            background: var(--color-acento);
+            color: var(--color-blanco);
+            padding: 18px 35px;
+            font-size: 1.4rem;
+            font-weight: 700;
+            font-family: var(--fuente-titulos);
+            text-decoration: none;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 5px 20px rgba(243, 112, 33, 0.5);
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            max-width: 450px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(243, 112, 33, 0.7);
+        }
+        
+        .cta-subtitle {
+            display: block;
+            font-size: 0.9rem;
+            margin-top: 8px;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+
+        /* --- SECCIÓN HERO: PROMESA DE RENDIMIENTO --- */
+        .hero {
+            background-color: var(--color-secundario);
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .product-type-badge {
+            display: inline-block;
+            background-color: #e9ecef;
+            color: var(--color-texto);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            border: 1px solid #dee2e6;
+        }
+
+        .hero h1 {
+            font-family: var(--fuente-titulos);
+            font-size: 3.2rem;
+            line-height: 1.2;
+            color: var(--color-primario);
+            margin-bottom: 15px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero .sub-headline {
+            font-size: 1.4rem;
+            max-width: 650px;
+            margin: 0 auto 30px auto;
+            color: var(--color-texto);
+        }
+        
+        .hero-image {
+            max-width: 350px;
+            width: 100%;
+            margin-bottom: 30px;
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.15));
+        }
+        
+        /* --- SECCIÓN DE AGITACIÓN DEL PROBLEMA (ENFOQUE EN RENDIMIENTO) --- */
+        .problem-section {
+            background-color: var(--color-primario);
+            color: var(--color-blanco);
+        }
+        
+        .problem-section h2 {
+            text-align: center;
+            font-family: var(--fuente-titulos);
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: var(--color-blanco);
+        }
+        
+        .problem-list {
+            list-style: none;
+            max-width: 600px;
+            margin: auto;
+            font-size: 1.2rem;
+        }
+        
+        .problem-list li {
+            padding: 12px 0 12px 40px;
+            position: relative;
+        }
+
+        .problem-list li::before {
+            content: '🧠';
+            position: absolute;
+            left: 0;
+            top: 12px;
+            font-size: 1.5rem;
+        }
+        
+        /* --- SECCIÓN DE INGREDIENTES (LA SOLUCIÓN LÓGICA) --- */
+        .solution-section h2 {
+            text-align: center;
+            font-family: var(--fuente-titulos);
+            font-size: 2.8rem;
+            margin-bottom: 40px;
+        }
+        
+        .ingredient-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .ingredient-card {
+            background: var(--color-secundario);
+            border: 1px solid #eee;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .ingredient-card .icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: var(--color-acento);
+        }
+        
+        .ingredient-card h3 {
+            font-family: var(--fuente-titulos);
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+            color: var(--color-primario);
+        }
+        
+        /* Estilos para la nueva imagen */
+        .extra-image-container {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .extra-image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .trust-badge {
+            background: #fff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            border: 1px solid #ddd;
+        }
+
+        /* --- SECCIÓN OFERTA IRRESISTIBLE (EL NÚCLEO) --- */
+        .offer-section {
+            background-color: var(--color-primario);
+            color: var(--color-blanco);
+        }
+
+        .offer-box {
+            border: 3px dashed var(--color-acento);
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .offer-box h2 {
+            font-family: var(--fuente-titulos);
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            text-align: center;
+            color: var(--color-blanco);
+        }
+        
+        .offer-box .tagline {
+            background-color: var(--color-acento);
+            color: var(--color-blanco);
+            display: inline-block;
+            padding: 5px 15px;
+            font-weight: 700;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .price {
+            font-size: 4.5rem;
+            font-weight: 700;
+            font-family: var(--fuente-titulos);
+            margin: 10px 0;
+            color: var(--color-acento);
+        }
+        
+        .what-you-get {
+            list-style: none;
+            margin: 25px auto;
+            max-width: 500px;
+            text-align: left;
+            font-size: 1.1rem;
+        }
+
+        .what-you-get li {
+            padding: 8px 0 8px 35px;
+            position: relative;
+        }
+        
+        .what-you-get li::before {
+            content: '⚡';
+            position: absolute;
+            left: 0;
+            top: 8px;
+        }
+
+        .shipping-info {
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin: 20px 0 30px 0;
+            display: block;
+        }
+
+        /* --- SECCIÓN TESTIMONIOS --- */
+        .testimonials h2 {
+            text-align: center;
+            font-family: var(--fuente-titulos);
+            font-size: 2.8rem;
+            margin-bottom: 40px;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+            max-width: 700px;
+            margin: auto;
+        }
+        
+        .testimonial-card {
+            background-color: var(--color-secundario);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 6px solid var(--color-acento);
+        }
+        
+        .testimonial-card p {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .testimonial-card .author {
+            font-weight: 700;
+            text-align: right;
+            color: var(--color-acento);
+        }
+        
+        /* --- SECCIÓN FAQ --- */
+        .faq h2 {
+            text-align: center;
+            font-family: var(--fuente-titulos);
+            font-size: 2.8rem;
+            margin-bottom: 40px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .faq-question {
+            font-size: 1.3rem;
+            font-weight: 700;
+            cursor: pointer;
+            position: relative;
+            padding-right: 30px;
+        }
+        
+        .faq-question::after {
+            content: '+';
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            transition: transform 0.3s;
+            color: var(--color-acento);
+        }
+        
+        .faq-item.active .faq-question::after {
+            transform: translateY(-50%) rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding-top: 15px;
+        }
+        
+        /* --- SECCIÓN DE ADVERTENCIAS LEGALES --- */
+        .legal-disclaimer {
+            background-color: #f8f9fa;
+            border-top: 2px solid #dee2e6;
+            border-bottom: 2px solid #dee2e6;
+        }
+        .legal-disclaimer .container {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        .legal-disclaimer h3 {
+            text-align: center;
+            font-family: var(--fuente-titulos);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--color-primario);
+        }
+        .legal-disclaimer p {
+            font-size: 0.95rem;
+            max-width: 700px;
+            margin: 0 auto 10px auto;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: var(--color-primario);
+            color: var(--color-blanco);
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        /* --- BOTÓN FIJO EN MÓVIL Y ESCRITORIO --- */
+        .fixed-cta {
+            display: block;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(5px);
+            padding: 15px;
+            box-shadow: 0 -3px 10px rgba(0,0,0,0.15);
+            z-index: 1000;
+            text-align: center;
+        }
+        
+        .fixed-cta .cta-button {
+            font-size: 1.2rem;
+            padding: 15px 25px;
+        }
+
+        /* --- RESPONSIVE DESIGN --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero .sub-headline { font-size: 1.2rem; }
+            .problem-section h2, .solution-section h2, .offer-box h2, .testimonials h2, .faq h2 { font-size: 2.2rem; }
+            .container { padding: 40px 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ====================================================== -->
+    <!-- ============ SECCIÓN HERO: PROMESA DE RENDIMIENTO ====== -->
+    <!-- ====================================================== -->
+    <header class="hero">
+        <div class="container">
+            <span class="product-type-badge">SUPLEMENTO ALIMENTICIO</span>
+            <img src="http://googleusercontent.com/file_content/3" alt="Caja de E-BOOST Potencia, Enfoque y Energía" class="hero-image">
+            <h1>DESBLOQUEA TU MÁXIMO RENDIMIENTO MENTAL Y FÍSICO</h1>
+            <p class="sub-headline">La fórmula de energía inteligente que combate la fatiga y agudiza tu enfoque sin el nerviosismo ni la caída abrupta de las bebidas energéticas tradicionales.</p>
+            <!-- BOTÓN DE ACCIÓN 1: WHATSAPP -->
+            <a href="https://wa.me/56959744777?text=Hola!%20quiero%20comenzar%20a%20desbloquear%20mi%20rendimiento%20con%20E-BOOST" target="_blank" class="cta-button">
+                SÍ, QUIERO ENERGÍA Y ENFOQUE AHORA
+                <span class="cta-subtitle">Haz tu pedido por WhatsApp</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- ====================================================== -->
+        <!-- ======== SECCIÓN DEL PROBLEMA (ENFOQUE RENDIMIENTO) ==== -->
+        <!-- ====================================================== -->
+        <section class="problem-section">
+            <div class="container">
+                <h2>¿ALGUNO DE ESTOS PUNTOS DOMINA TU DÍA?</h2>
+                <ul class="problem-list">
+                    <li>La "niebla mental" aparece después del almuerzo y destruye tu productividad por la tarde.</li>
+                    <li>Dependes de múltiples tazas de café solo para funcionar, sufriendo el nerviosismo y la posterior caída.</li>
+                    <li>Procrastinas tareas importantes porque sientes que no tienes la energía mental para comenzarlas.</li>
+                    <li>Te sientes agotado y sin "batería" mucho antes de que termine tu jornada laboral o de estudios.</li>
+                    <li>Buscas una ventaja competitiva para rendir al máximo en tu trabajo, estudios o entrenamientos.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ====================================================== -->
+        <!-- ============ SECCIÓN DE LA SOLUCIÓN (INGREDIENTES) ==== -->
+        <!-- ====================================================== -->
+        <section class="solution-section">
+            <div class="container">
+                <h2>LA CIENCIA DETRÁS DE LA ENERGÍA INTELIGENTE</h2>
+                <div class="ingredient-grid">
+                    <div class="ingredient-card">
+                        <div class="icon">🌿</div>
+                        <h3>Guaraná y Yerba Mate</h3>
+                        <p>Fuentes naturales de cafeína que proporcionan energía sostenida y alerta mental, sin los peaks y caídas bruscas.</p>
+                    </div>
+                    <div class="ingredient-card">
+                        <div class="icon">🍃</div>
+                        <h3>Té Negro</h3>
+                        <p>Contiene L-teanina, un aminoácido que promueve un estado de calma y enfoque, contrarrestando el nerviosismo.</p>
+                    </div>
+                    <div class="ingredient-card">
+                        <div class="icon">💪</div>
+                        <h3>Aminoácidos (BCAAs)</h3>
+                        <p>Valina, Leucina e Isoleucina. Contribuyen a reducir la sensación de fatiga durante la actividad intensa.</p>
+                    </div>
+                    <div class="ingredient-card">
+                        <div class="icon">💡</div>
+                        <h3>Complejo Vitamínico</h3>
+                        <p>Un mix completo de vitaminas que actúan como combustible para tu cerebro y apoyan la producción de energía.</p>
+                    </div>
+                </div>
+
+                <!-- IMAGEN ADICIONAL INSERTADA -->
+                <div class="extra-image-container">
+                    <img src="http://googleusercontent.com/file_content/4" alt="Beneficios visuales de E-BOOST">
+                </div>
+
+                <div class="trust-badges">
+                    <span class="trust-badge">✓ Formato en 28 Sachets</span>
+                    <span class="trust-badge">✓ Energía Inteligente</span>
+                    <span class="trust-badge">✓ 0% Azúcar</span>
+                    <span class="trust-badge">✓ Solo 2 Calorías</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================== -->
+        <!-- ======== SECCIÓN OFERTA IRRESISTIBLE (Hormozi) ======== -->
+        <!-- ====================================================== -->
+        <section class="offer-section" id="oferta">
+            <div class="container">
+                <div class="offer-box">
+                    <h2>TU ARSENAL PARA 28 DÍAS DE ALTO RENDIMIENTO</h2>
+                    <span class="tagline">OFERTA DE LANZAMIENTO EXCLUSIVA</span>
+                    <ul class="what-you-get">
+                        <li>1 Caja de E-BOOST con 28 sachets individuales.</li>
+                        <li>Energía limpia y sostenida para dominar tu día.</li>
+                        <li>Mayor capacidad de enfoque y concentración.</li>
+                        <li>Soporte para combatir la fatiga mental y el "burnout".</li>
+                        <li>Fórmula con 0% azúcar y delicioso sabor a mandarina.</li>
+                    </ul>
+                    <div class="price">$39.990 CLP</div>
+                    <strong class="shipping-info">
+                        + ENVÍO A TODO CHILE POR SOLO $3.990
+                    </strong>
+                    <!-- BOTÓN DE ACCIÓN 2: WHATSAPP -->
+                    <a href="https://wa.me/56959744777?text=Hola!%20quiero%20comenzar%20a%20desbloquear%20mi%20rendimiento%20con%20E-BOOST" target="_blank" class="cta-button">
+                        ¡LO QUIERO! PEDIR MI CAJA POR WHATSAPP
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ====================================================== -->
+        <!-- ============== SECCIÓN TESTIMONIOS =================== -->
+        <!-- ====================================================== -->
+        <section class="testimonials">
+            <div class="container">
+                <h2>PERSONAS REALES, RENDIMIENTO REAL</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <p>"Como estudiante de derecho, E-Boost cambió mis tardes de estudio. Paso de la niebla mental a una claridad increíble en minutos. Es mi arma secreta para los exámenes. ¡Y el sabor es buenísimo!"</p>
+                        <p class="author">- Javier M., Estudiante</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"Soy emprendedor y mis días son una locura. El café me dejaba ansioso. Con E-Boost tengo la energía para todo el día, pero con un enfoque tranquilo que me permite tomar mejores decisiones. 100% recomendado."</p>
+                        <p class="author">- Sofía L., Emprendedora</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================== -->
+        <!-- ====== SECCIÓN PREGUNTAS FRECUENTES (FAQ) ============ -->
+        <!-- ====================================================== -->
+        <section class="faq">
+            <div class="container">
+                <h2>TUS DUDAS, RESUELTAS.</h2>
+                <div class="faq-item">
+                    <div class="faq-question">¿Es como una bebida energética tradicional?</div>
+                    <div class="faq-answer">
+                        <p>No. E-BOOST está diseñado para darte energía y enfoque sin el exceso de azúcar, las altas dosis de cafeína sintética y los ingredientes artificiales de las bebidas energéticas comunes. El resultado es energía limpia, sin nerviosismo ni caídas bruscas.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">¿Cuándo es el mejor momento para tomarlo?</div>
+                    <div class="faq-answer">
+                        <p>Es ideal para tomarlo 30 minutos antes de una tarea que requiera alta concentración (trabajo, estudio, entrenamiento) o en la mañana para empezar el día con máxima energía y claridad mental.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">¿Contiene azúcar?</div>
+                    <div class="faq-answer">
+                        <p>No. E-BOOST tiene 0 gramos de azúcar y está endulzado con estevia. Cada sachet contiene solo 2 calorías, por lo que no afecta tu plan de alimentación.</p>
+                    </div>
+                </div>
+                 <div class="faq-item">
+                    <div class="faq-question">¿Cómo se prepara?</div>
+                    <div class="faq-answer">
+                        <p>Es muy fácil. Vierte el contenido de un sachet (7g) en un vaso o botella con 250 ml de agua fría, agita bien y disfruta de su refrescante sabor a mandarina.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================== -->
+        <!-- ====== SECCIÓN DE ADVERTENCIAS LEGALES (IMPORTANTE) === -->
+        <!-- ====================================================== -->
+        <section class="legal-disclaimer">
+            <div class="container">
+                <h3>INFORMACIÓN IMPORTANTE</h3>
+                <p><strong>Este producto es un suplemento alimenticio, no es un medicamento y no suple una alimentación balanceada.</strong></p>
+                <p>Su uso no es recomendable para consumo por menores de 18 años, embarazadas y nodrizas, salvo indicación profesional competente y no reemplaza a una alimentación balanceada.</p>
+                <p>Las personas con alguna condición médica preexistente o que tomen medicamentos deben consultar a su médico antes de consumir cualquier suplemento.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- ====================================================== -->
+    <!-- ============== BOTÓN FIJO INFERIOR ===================== -->
+    <!-- ====================================================== -->
+    <div class="fixed-cta">
+        <a href="https://wa.me/56959744777?text=Hola!%20quiero%20comenzar%20a%20desbloquear%20mi%20rendimiento%20con%20E-BOOST" target="_blank" class="cta-button">SÍ, QUIERO PEDIR MI CAJA AHORA</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 FWP Chile | Todos los derechos reservados.<br>Los suplementos alimenticios son una herramienta para complementar tu estilo de vida.</p>
+    </footer>
+    
+    <script>
+        // Script simple y eficiente para el acordeón de FAQ
+        document.addEventListener('DOMContentLoaded', function () {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    const currentlyActive = document.querySelector('.faq-item.active');
+                    if (currentlyActive && currentlyActive !== item) {
+                        currentlyActive.classList.remove('active');
+                    }
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

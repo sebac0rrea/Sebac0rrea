@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título enfocado en el resultado: metabolismo y energía -->
+    <title>Activa tu Metabolismo: Energía y Control de Peso Todos los Días</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- ESTILO HORMOZI: Colores alineados con la marca 24BURN --- */
+        :root {
+            --color-primario: #111111;
+            --color-secundario: #f9f9f9;
+            /* Color de acento principal extraído de la marca 24BURN */
+            --color-acento: #A5C63A; 
+            --color-texto: #333;
+            --color-blanco: #ffffff;
+            --fuente-titulos: 'Oswald', sans-serif;
+            --fuente-cuerpo: 'Roboto', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--fuente-cuerpo);
+            color: var(--color-texto);
+            background-color: var(--color-blanco);
+            line-height: 1.7;
+            /* Espacio en la parte inferior para que el botón fijo no tape el contenido */
+            padding-bottom: 100px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+        
+        /* --- BOTÓN DE ACCIÓN (CTA): GRANDE, CLARO, CON COLOR DE MARCA --- */
+        .cta-button {
+            display: inline-block;
+            background: var(--color-acento);
+            color: var(--color-primario);
+            padding: 18px 35px;
+            font-size: 1.4rem;
+            font-weight: 700;
+            font-family: var(--fuente-titulos);
+            text-decoration: none;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 5px 20px rgba(165, 198, 58, 0.5);
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            max-width: 450px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(165, 198, 58, 0.7);
+        }
+        
+        .cta-subtitle {
+            display: block;
+            font-size: 0.9rem;
+            margin-top: 8px;
+            font-weight: 700;
+            opacity: 0.9;
+        }
+
+        /* --- SECCIÓN HERO: PROMESA DE ACTIVACIÓN --- */
+        .hero {
+            background-color: var(--color-secundario);
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .product-type-badge {
+            display: inline-block;
+            background-color: #e9ecef;
+            color: var(--color-texto);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            border: 1px solid #dee2e6;
+        }
+
+        .hero h1 {
+            font-family: var(--fuente-titulos);
+            font-size: 3.2rem;
+            line-height: 1.2;
+            color: var(--color-primario);
+            margin-bottom: 15px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero .sub-headline {
+            font-size: 1.4rem;
+            max-width: 650px;
+            margin: 0 auto 30px auto;
+            color: var(--color-texto);
+        }
+        
+        .hero-image {
+            max-width: 300px; /* Ajustado para pote */
+            width: 100%;
+            margin-bottom: 30px;
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.15));
+        }
+        
+        /* --- SECCIÓN DE AGITACIÓN DEL PROBLEMA (ENFOQUE METABOLISMO) --- */
+        .problem-section {
+            background-color: var(--color-primario);
+            color: var(--color-blanco);
+        }
+        
+        .problem-section h2 {
+            text-align: center;
+            font-family: var(--fuente-titulos);
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: var(--color-blanco);
+        }
+        
+        .problem-list {
+            list-style: none;
+            max-width: 600px;
+            margin: auto;
+            font-size: 1.2rem;
+        }
+        
+        .problem-list li {
+            padding: 12px 0 12px 40px;
+            position: relative;
+        }
+
+        .problem-list li::before {
+            content: '🔥';
+            position: absolute;
+            left: 0;
+            top: 12px;
+            font-size: 1.5rem;
+        }
+        
+        /* --- SECCIÓN DE INGREDIENTES (LA SOLUCIÓN LÓGICA) --- */
+        .solution-section h2 {
+            text-align: center;
+            font-family: var(--fuente-titulos);
+            font-size: 2.8rem;
+            margin-bottom: 40px;
+        }
+        
+        .ingredient-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .ingredient-card {
+            background: var(--color-secundario);
+            border: 1px solid #eee;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .ingredient-card .icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: var(--color-acento);
+        }
+        
+        .ingredient-card h3 {
+            font-family: var(--fuente-titulos);
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+            color: var(--color-primario);
+        }
+
+        .extra-image-container {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .extra-image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .trust-badge {
+            background: #fff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            border: 1px solid #ddd;
+        }
+
+        /* --- SECCIÓN OFERTA IRRESISTIBLE (EL NÚCLEO) --- */
+        .offer-section {
+            background-color: var(--color-primario);
+            color: var(--color-blanco);
+        }
+
+        .offer-box {
+            border: 3px dashed var(--color-acento);
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .offer-box h2 {
+            font-family: var(--fuente-titulos);
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            text-align: center;
+            color: var(--color-blanco);
+        }
+        
+        .offer-box .tagline {
+            background-color: var(--color-acento);
+            color: var(--color-primario);
+            display: inline-block;
+            padding: 5px 15px;
+            font-weight: 700;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .price {
+            font-size: 4.5rem;
+            font-weight: 700;
+            font-family: var(--fuente-titulos);
+            margin: 10px 0;
+            color: var(--color-acento);
+        }
+        
+        .what-you-get {
+            list-style: none;
+            margin: 25px auto;
+            max-width: 500px;
+            text-align: left;
+            font-size: 1.1rem;
+        }
+
+        .what-you-get li {
+            padding: 8px 0 8px 35px;
+            position: relative;
+        }
+        
+        .what-you-get li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            color: var(--color-acento);
+        }
+
+        .shipping-info {
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin: 20px 0 30px 0;
+            display: block;
+        }
+
+        /* --- SECCIÓN TESTIMONIOS --- */
+        .testimonials h2 {
+            text-align: center;
+            font-family: var(--fuente-titulos);
+            font-size: 2.8rem;
+            margin-bottom: 40px;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+            max-width: 700px;
+            margin: auto;
+        }
+        
+        .testimonial-card {
+            background-color: var(--color-secundario);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 6px solid var(--color-acento);
+        }
+        
+        .testimonial-card p {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .testimonial-card .author {
+            font-weight: 700;
+            text-align: right;
+            color: var(--color-acento);
+        }
+        
+        /* --- SECCIÓN FAQ --- */
+        .faq h2 {
+            text-align: center;
+            font-family: var(--fuente-titulos);
+            font-size: 2.8rem;
+            margin-bottom: 40px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .faq-question {
+            font-size: 1.3rem;
+            font-weight: 700;
+            cursor: pointer;
+            position: relative;
+            padding-right: 30px;
+        }
+        
+        .faq-question::after {
+            content: '+';
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            transition: transform 0.3s;
+            color: var(--color-acento);
+        }
+        
+        .faq-item.active .faq-question::after {
+            transform: translateY(-50%) rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding-top: 15px;
+        }
+        
+        /* --- SECCIÓN DE ADVERTENCIAS LEGALES --- */
+        .legal-disclaimer {
+            background-color: #f8f9fa;
+            border-top: 2px solid #dee2e6;
+            border-bottom: 2px solid #dee2e6;
+        }
+        .legal-disclaimer .container {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        .legal-disclaimer h3 {
+            text-align: center;
+            font-family: var(--fuente-titulos);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--color-primario);
+        }
+        .legal-disclaimer p {
+            font-size: 0.95rem;
+            max-width: 700px;
+            margin: 0 auto 10px auto;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: var(--color-primario);
+            color: var(--color-blanco);
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        /* --- BOTÓN FIJO EN MÓVIL Y ESCRITORIO --- */
+        .fixed-cta {
+            display: block;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(5px);
+            padding: 15px;
+            box-shadow: 0 -3px 10px rgba(0,0,0,0.15);
+            z-index: 1000;
+            text-align: center;
+        }
+        
+        .fixed-cta .cta-button {
+            font-size: 1.2rem;
+            padding: 15px 25px;
+        }
+
+        /* --- RESPONSIVE DESIGN --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero .sub-headline { font-size: 1.2rem; }
+            .problem-section h2, .solution-section h2, .offer-box h2, .testimonials h2, .faq h2 { font-size: 2.2rem; }
+            .container { padding: 40px 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ====================================================== -->
+    <!-- ============ SECCIÓN HERO: PROMESA DE ACTIVACIÓN ======= -->
+    <!-- ====================================================== -->
+    <header class="hero">
+        <div class="container">
+            <span class="product-type-badge">SUPLEMENTO ALIMENTICIO</span>
+            <img src="http://googleusercontent.com/file_content/6" alt="Pote de 24BURN Reduce y Activa" class="hero-image">
+            <h1>EL ACELERADOR QUE TU METABOLISMO NECESITA PARA ACTIVARSE</h1>
+            <p class="sub-headline">Una combinación de ingredientes naturales diseñada para apoyar tu energía, activar tu metabolismo y ayudarte a alcanzar tus objetivos de control de peso.</p>
+            <!-- BOTÓN DE ACCIÓN 1: WHATSAPP -->
+            <a href="https://wa.me/56959744777?text=Hola!%20Quiero%20comenzar%20a%20activar%20mi%20metabolismo%20con%2024BURN" target="_blank" class="cta-button">
+                SÍ, QUIERO ACTIVAR MI METABOLISMO
+                <span class="cta-subtitle">Haz tu pedido por WhatsApp</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- ====================================================== -->
+        <!-- ======== SECCIÓN DEL PROBLEMA (ENFOQUE METABOLISMO) ==== -->
+        <!-- ====================================================== -->
+        <section class="problem-section">
+            <div class="container">
+                <h2>¿TE SIENTES ESTANCADO/A CON ESTO?</h2>
+                <ul class="problem-list">
+                    <li>Sientes que tu metabolismo es lento y que todo lo que comes "se nota" de inmediato.</li>
+                    <li>Te falta la energía para entrenar con intensidad o incluso para mantenerte activo/a durante el día.</li>
+                    <li>Luchas contra la ansiedad y los antojos que sabotean tu progreso.</li>
+                    <li>Has probado dietas estrictas que te dejan con hambre, sin energía y de mal humor.</li>
+                    <li>Buscas una herramienta efectiva que trabaje contigo para facilitar el proceso de control de peso.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ====================================================== -->
+        <!-- ============ SECCIÓN DE LA SOLUCIÓN (INGREDIENTES) ==== -->
+        <!-- ====================================================== -->
+        <section class="solution-section">
+            <div class="container">
+                <h2>EL TRIDENTE PARA LA ACTIVACIÓN METABÓLICA</h2>
+                <div class="ingredient-grid">
+                    <div class="ingredient-card">
+                        <div class="icon">🍃</div>
+                        <h3>Té Verde</h3>
+                        <p>Conocido por sus polifenoles, apoya el metabolismo y la termogénesis, ayudando a tu cuerpo a usar la energía de manera más eficiente.</p>
+                    </div>
+                    <div class="ingredient-card">
+                        <div class="icon">💊</div>
+                        <h3>L-Carnitina</h3>
+                        <p>Un aminoácido clave que ayuda a transportar los ácidos grasos a las células para ser usados como fuente de energía.</p>
+                    </div>
+                    <div class="ingredient-card">
+                        <div class="icon">⚡</div>
+                        <h3>Panax Ginseng</h3>
+                        <p>Un adaptógeno clásico que contribuye a la energía física y mental, y ayuda a combatir la sensación de fatiga.</p>
+                    </div>
+                    <div class="ingredient-card">
+                        <div class="icon">🍋</div>
+                        <h3>Sabor Té Limón</h3>
+                        <p>Una experiencia refrescante para que disfrutes del proceso. Cuidarse nunca supo tan bien.</p>
+                    </div>
+                </div>
+
+                <!-- IMAGEN ADICIONAL INSERTADA -->
+                <div class="extra-image-container">
+                    <img src="http://googleusercontent.com/file_content/10" alt="Beneficios visuales de 24BURN">
+                </div>
+
+                <div class="trust-badges">
+                    <span class="trust-badge">✓ 33 Porciones</span>
+                    <span class="trust-badge">✓ 0% Azúcar</span>
+                    <span class="trust-badge">✓ Apto para Hipertensos</span>
+                    <span class="trust-badge">✓ Libre de Octógonos</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================== -->
+        <!-- ======== SECCIÓN OFERTA IRRESISTIBLE (Hormozi) ======== -->
+        <!-- ====================================================== -->
+        <section class="offer-section" id="oferta">
+            <div class="container">
+                <div class="offer-box">
+                    <h2>TU PLAN DE ACTIVACIÓN PARA 33 DÍAS</h2>
+                    <span class="tagline">OFERTA DE LANZAMIENTO EXCLUSIVA</span>
+                    <ul class="what-you-get">
+                        <li>1 Pote de 24BURN con 33 porciones para activar tu mes.</li>
+                        <li>Soporte para un metabolismo más activo.</li>
+                        <li>Apoyo energético para tus entrenamientos y tu día a día.</li>
+                        <li>Contribuye a una mayor sensación de saciedad.</li>
+                        <li>Una fórmula sin azúcar y con un delicioso sabor a té limón.</li>
+                    </ul>
+                    <div class="price">$31.900 CLP</div>
+                    <strong class="shipping-info">
+                        + ENVÍO A TODO CHILE POR SOLO $3.990
+                    </strong>
+                    <!-- BOTÓN DE ACCIÓN 2: WHATSAPP -->
+                    <a href="https://wa.me/56959744777?text=Hola!%20Quiero%20comenzar%20a%20activar%20mi%20metabolismo%20con%2024BURN" target="_blank" class="cta-button">
+                        ¡LO QUIERO! PEDIR MI 24BURN POR WHATSAPP
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ====================================================== -->
+        <!-- ============== SECCIÓN TESTIMONIOS =================== -->
+        <!-- ====================================================== -->
+        <section class="testimonials">
+            <div class="container">
+                <h2>ELLOS YA ACTIVARON SU CAMBIO</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <p>"Estaba súper estancada con mi peso. Empecé a tomar 24BURN en las mañanas y la energía que me da para entrenar es increíble. Ya he notado cambios en mis medidas y me siento mucho menos hinchada. ¡Es mi mejor aliado!"</p>
+                        <p class="author">- Camila R., Viña del Mar</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"Lo mejor es que me ayuda a controlar la ansiedad por comer en las tardes. Me tomo uno después de almuerzo y quedo perfecto. Me siento más activo y he visto cómo mi cuerpo ha empezado a cambiar. Totalmente recomendado."</p>
+                        <p class="author">- Benjamín A., Santiago</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================== -->
+        <!-- ====== SECCIÓN PREGUNTAS FRECUENTES (FAQ) ============ -->
+        <!-- ====================================================== -->
+        <section class="faq">
+            <div class="container">
+                <h2>TUS DUDAS, RESUELTAS.</h2>
+                <div class="faq-item">
+                    <div class="faq-question">¿Tengo que hacer dieta y ejercicio para que funcione?</div>
+                    <div class="faq-answer">
+                        <p>24BURN es una herramienta para potenciar tus resultados. Funciona mejor cuando se combina con un estilo de vida saludable que incluya una alimentación balanceada y actividad física regular. No es un producto milagroso, es un acelerador.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">¿Cuándo es el mejor momento para tomarlo?</div>
+                    <div class="faq-answer">
+                        <p>Puedes tomarlo en la mañana para activar tu día y tu metabolismo, o unos 30 minutos antes de entrenar para potenciar tu energía y rendimiento.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">¿Tiene efectos secundarios o "efecto rebote"?</div>
+                    <div class="faq-answer">
+                        <p>24BURN está formulado con ingredientes naturales y no genera dependencia ni efecto rebote. Al ser un suplemento que apoya un metabolismo saludable, los resultados que obtengas con un buen estilo de vida se mantendrán. No contiene estimulantes agresivos.</p>
+                    </div>
+                </div>
+                 <div class="faq-item">
+                    <div class="faq-question">¿Cómo se prepara?</div>
+                    <div class="faq-answer">
+                        <p>Muy fácil. Disuelve un scoop (15g) en un vaso con 200 ml de agua (fría, tibia o caliente). Revuelve bien y disfruta su sabor a té limón.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================== -->
+        <!-- ====== SECCIÓN DE ADVERTENCIAS LEGALES (IMPORTANTE) === -->
+        <!-- ====================================================== -->
+        <section class="legal-disclaimer">
+            <div class="container">
+                <h3>INFORMACIÓN IMPORTANTE</h3>
+                <p><strong>Este producto es un suplemento alimenticio, no es un medicamento y no suple una alimentación balanceada.</strong></p>
+                <p>Su uso no es recomendable para consumo por menores de 18 años, embarazadas y nodrizas, salvo indicación profesional competente y no reemplaza a una alimentación balanceada.</p>
+                <p>Las personas con alguna condición médica preexistente o que tomen medicamentos deben consultar a su médico antes de consumir cualquier suplemento.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- ====================================================== -->
+    <!-- ============== BOTÓN FIJO INFERIOR ===================== -->
+    <!-- ====================================================== -->
+    <div class="fixed-cta">
+        <a href="https://wa.me/56959744777?text=Hola!%20Quiero%20comenzar%20a%20activar%20mi%20metabolismo%20con%2024BURN" target="_blank" class="cta-button">SÍ, QUIERO ACTIVAR MI METABOLISMO AHORA</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 FWP Chile | Todos los derechos reservados.<br>Los suplementos alimenticios son una herramienta para complementar tu estilo de vida.</p>
+    </footer>
+    
+    <script>
+        // Script simple y eficiente para el acordeón de FAQ
+        document.addEventListener('DOMContentLoaded', function () {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    const currentlyActive = document.querySelector('.faq-item.active');
+                    if (currentlyActive && currentlyActive !== item) {
+                        currentlyActive.classList.remove('active');
+                    }
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
