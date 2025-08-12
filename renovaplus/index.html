@@ -35,6 +35,8 @@
             color: var(--color-texto);
             background-color: var(--color-blanco);
             line-height: 1.7;
+            /* Espacio en la parte inferior para que el botón fijo no tape el contenido */
+            padding-bottom: 100px;
         }
 
         .container {
@@ -120,7 +122,7 @@
             filter: drop-shadow(0 10px 15px rgba(0,0,0,0.15));
         }
         
-        /* --- SECCIÓN DE AGITACIÓN DEL PROBLEMA (ENFOCADO EN BIENESTAR) --- */
+        /* --- SECCIÓN DE AGITACIÓN DEL PROBLEMA (ENFOQUE BIENESTAR) --- */
         .problem-section {
             background-color: var(--color-primario);
             color: var(--color-blanco);
@@ -188,13 +190,24 @@
             margin-bottom: 10px;
             color: var(--color-primario);
         }
+
+        .extra-image-container {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .extra-image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
         
         .trust-badges {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 20px;
-            margin-top: 40px;
             flex-wrap: wrap;
         }
         
@@ -216,7 +229,8 @@
         .offer-box {
             border: 3px dashed var(--color-acento);
             border-radius: 10px;
-            padding: 30px;
+            padding: 40px;
+            text-align: center;
         }
         
         .offer-box h2 {
@@ -225,31 +239,6 @@
             margin-bottom: 15px;
             text-align: center;
             color: var(--color-blanco);
-        }
-        
-        .offer-content-grid {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-            flex-wrap: wrap; /* Para responsividad */
-        }
-        
-        .offer-image-container {
-            flex: 1;
-            min-width: 250px;
-            text-align: center;
-        }
-
-        .offer-image-container img {
-            max-width: 100%;
-            height: auto;
-            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));
-        }
-
-        .offer-details {
-            flex: 1.5;
-            min-width: 300px;
-            text-align: center;
         }
         
         .offer-box .tagline {
@@ -415,9 +404,24 @@
             padding: 30px 20px;
         }
 
-        /* --- BOTÓN FIJO EN MÓVIL --- */
+        /* --- BOTÓN FIJO EN MÓVIL Y ESCRITORIO --- */
         .fixed-cta {
-            display: none;
+            display: block;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(5px);
+            padding: 15px;
+            box-shadow: 0 -3px 10px rgba(0,0,0,0.15);
+            z-index: 1000;
+            text-align: center;
+        }
+        
+        .fixed-cta .cta-button {
+            font-size: 1.2rem;
+            padding: 15px 25px;
         }
 
         /* --- RESPONSIVE DESIGN --- */
@@ -426,26 +430,6 @@
             .hero .sub-headline { font-size: 1.2rem; }
             .problem-section h2, .solution-section h2, .offer-box h2, .testimonials h2, .faq h2 { font-size: 2.2rem; }
             .container { padding: 40px 15px; }
-
-            .fixed-cta {
-                display: block;
-                position: fixed;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                background-color: var(--color-blanco);
-                padding: 15px;
-                box-shadow: 0 -3px 10px rgba(0,0,0,0.15);
-                z-index: 1000;
-                text-align: center;
-            }
-            
-            .fixed-cta .cta-button {
-                font-size: 1.2rem;
-                padding: 15px 25px;
-            }
-            
-            body { padding-bottom: 100px; }
         }
     </style>
 </head>
@@ -513,6 +497,12 @@
                         <p>Minerales esenciales que contribuyen al funcionamiento normal del sistema inmune y al mantenimiento de los huesos.</p>
                     </div>
                 </div>
+
+                <!-- ESPACIO PARA IMAGEN ADICIONAL -->
+                <div class="extra-image-container">
+                    <img src="images/pote renova.png" alt="Imagen de beneficio adicional de RENÖVA+">
+                </div>
+
                 <div class="trust-badges">
                     <span class="trust-badge">✓ Formulado por Doctores</span>
                     <span class="trust-badge">✓ Ingredientes Premium</span>
@@ -525,38 +515,29 @@
         <!-- ====================================================== -->
         <!-- ======== SECCIÓN OFERTA IRRESISTIBLE (Hormozi) ======== -->
         <!-- ====================================================== -->
-       <section class="offer-section" id="oferta">
+        <section class="offer-section" id="oferta">
             <div class="container">
                 <div class="offer-box">
                     <h2>TU PLAN DE BIENESTAR PARA 21 DÍAS</h2>
-                    <div class="offer-content-grid">
-                        <div class="offer-image-container">
-                            <img src="http://googleusercontent.com/file_content/2" alt="Pote de RENÖVA+ en la oferta">
-                        </div>
-                        <div class="offer-details">
-                            <span class="tagline">OFERTA DE LANZAMIENTO EXCLUSIVA</span>
-                            <ul class="what-you-get">
-                                <li>Un pote de RENÖVA+ con 21 porciones.</li>
-                                <li>Aporte de nutrientes clave para la piel.</li>
-                                <li>Ingredientes para tu energía y vitalidad.</li>
-                                <li>Soporte para cabello y uñas.</li>
-                                <li>Fórmula con 0% azúcar y 11g de proteína.</li>
-                            </ul>
-                            <div class="price">$49.990 CLP</div>
-                            <strong class="shipping-info">
-                                + ENVÍO A TODO CHILE POR SOLO $3.990
-                            </strong>
-                            <!-- BOTÓN DE ACCIÓN 2: WHATSAPP -->
-                            <a href="https://wa.me/56959744777?text=Hola!%20quiero%20comenzar%20a%20potenciar%20mi%20bienestar%20con%20RENOVA+" target="_blank" class="cta-button">
-                                ¡LO QUIERO! PEDIR POR WHATSAPP
-                            </a>
-                        </div>
-                    </div>
+                    <span class="tagline">OFERTA DE LANZAMIENTO EXCLUSIVA</span>
+                    <ul class="what-you-get">
+                        <li>Un pote de RENÖVA+ con 21 porciones.</li>
+                        <li>Aporte de nutrientes clave para la piel.</li>
+                        <li>Ingredientes para tu energía y vitalidad.</li>
+                        <li>Soporte para cabello y uñas.</li>
+                        <li>Fórmula con 0% azúcar y 11g de proteína.</li>
+                    </ul>
+                    <div class="price">$49.990 CLP</div>
+                    <strong class="shipping-info">
+                        + ENVÍO A TODO CHILE POR SOLO $3.990
+                    </strong>
+                    <!-- BOTÓN DE ACCIÓN 2: WHATSAPP -->
+                    <a href="https://wa.me/56959744777?text=Hola!%20quiero%20comenzar%20a%20potenciar%20mi%20bienestar%20con%20RENOVA+" target="_blank" class="cta-button">
+                        ¡LO QUIERO! PEDIR POR WHATSAPP
+                    </a>
                 </div>
             </div>
         </section>
-
-
         
         <!-- ====================================================== -->
         <!-- ============== SECCIÓN TESTIMONIOS =================== -->
@@ -567,11 +548,11 @@
                 <div class="testimonial-grid">
                     <div class="testimonial-card">
                         <p>"Llevo 3 semanas tomando Renöva+ y me encanta cómo se siente mi piel, mucho más nutrida. Además, siento un plus de energía en mis mañanas. ¡Totalmente recomendado como complemento!"</p>
-                        <p class="author">- Daniela P., Las Condes</p>
+                        <p class="author">- Daniela F., Artificio</p>
                     </div>
                     <div class="testimonial-card">
-                        <p>"Lo compré para complementar mi nutrición deportiva. Siento un buen soporte en mis articulaciones después de correr y mi recuperación general es excelente. Me gusta que no tenga azúcar. Un 7."</p>
-                        <p class="author">- Ricardo G., Antofagasta</p>
+                        <p>"Lo compré para complementar mi nutrición deportiva. Siento un buen soporte en mis articulaciones (rodillas y tobillos) después de correr y mi recuperación general es excelente. Me su gusta rico sabor a berries y que no tenga azúcar. Un 100/10."</p>
+                        <p class="author">- Seba C., Chillan</p>
                     </div>
                 </div>
             </div>
@@ -624,11 +605,10 @@
     </main>
 
     <!-- ====================================================== -->
-    <!-- ============== BOTÓN FIJO PARA MÓVILES ================= -->
+    <!-- ============== BOTÓN FIJO INFERIOR ===================== -->
     <!-- ====================================================== -->
     <div class="fixed-cta">
-        <!-- BOTÓN DE ACCIÓN 3: WHATSAPP -->
-        <a href="https://wa.me/56959744777?text=Hola!%20quiero%20comenzar%20a%20potenciar%20mi%20bienestar%20con%20RENOVA+" target="_blank" class="cta-button">SÍ, QUIERO PEDIR POR WHATSAPP</a>
+        <a href="https://wa.me/56959744777?text=Hola!%20quiero%20comenzar%20a%20potenciar%20mi%20bienestar%20con%20RENOVA+" target="_blank" class="cta-button">SÍ, QUIERO POTENCIAR MI BIENESTAR</a>
     </div>
 
     <footer>
@@ -654,3 +634,4 @@
     </script>
 </body>
 </html>
+
