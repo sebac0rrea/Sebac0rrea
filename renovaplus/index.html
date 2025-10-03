@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Título enfocado en el resultado y el bienestar -->
-    <title>Potencia tu Bienestar: Apoyo para tu Piel, Cabello y Energía</title>
+    <!-- Título optimizado para el objetivo del producto -->
+    <title>RENÖVA+: Una Fórmula para la Firmeza de tu Piel y Bienestar Articular</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,11 +15,12 @@
         :root {
             --color-primario: #111111;
             --color-secundario: #f9f9f9;
-            /* Color de acento principal extraído del logo de RENÖVA+ */
             --color-acento: #C72C82; 
+            --color-acento-popular: #28a745; /* Verde para el botón popular */
             --color-texto: #333;
             --color-blanco: #ffffff;
-            --fuente-titulos: 'Oswald', sans-serif; /* Fuente de alto impacto */
+            --color-fondo-tarjeta: #1e1e1e; /* Color de fondo oscuro para las tarjetas */
+            --fuente-titulos: 'Oswald', sans-serif;
             --fuente-cuerpo: 'Roboto', sans-serif;
         }
 
@@ -45,10 +46,10 @@
             padding: 50px 20px;
         }
         
-        /* --- BOTÓN DE ACCIÓN (CTA): GRANDE, CLARO, CON COLOR DE MARCA --- */
+        /* --- BOTÓN DE ACCIÓN (CTA) --- */
         .cta-button {
             display: inline-block;
-            background: var(--color-acento); /* Color de marca sólido */
+            background: var(--color-acento);
             color: var(--color-blanco);
             padding: 18px 35px;
             font-size: 1.4rem;
@@ -58,7 +59,7 @@
             border-radius: 8px;
             text-align: center;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
-            box-shadow: 0 5px 20px rgba(199, 44, 130, 0.5);
+            box-shadow: 0 5px 20px rgba(0,0,0, 0.3);
             border: none;
             cursor: pointer;
             width: 100%;
@@ -67,7 +68,10 @@
 
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(199, 44, 130, 0.7);
+        }
+
+        .cta-button-popular {
+            background: var(--color-acento-popular);
         }
         
         .cta-subtitle {
@@ -78,7 +82,7 @@
             opacity: 0.9;
         }
 
-        /* --- SECCIÓN HERO: PROMESA DE BIENESTAR --- */
+        /* --- SECCIÓN HERO --- */
         .hero {
             background-color: var(--color-secundario);
             text-align: center;
@@ -122,7 +126,7 @@
             filter: drop-shadow(0 10px 15px rgba(0,0,0,0.15));
         }
         
-        /* --- SECCIÓN DE AGITACIÓN DEL PROBLEMA (ENFOQUE BIENESTAR) --- */
+        /* --- SECCIÓN DEL PROBLEMA --- */
         .problem-section {
             background-color: var(--color-primario);
             color: var(--color-blanco);
@@ -156,7 +160,7 @@
             font-size: 1.5rem;
         }
         
-        /* --- SECCIÓN DE INGREDIENTES (LA SOLUCIÓN LÓGICA) --- */
+        /* --- SECCIÓN DE LA SOLUCIÓN (INGREDIENTES) --- */
         .solution-section h2 {
             text-align: center;
             font-family: var(--fuente-titulos);
@@ -220,51 +224,39 @@
             border: 1px solid #ddd;
         }
 
-        /* --- SECCIÓN OFERTA IRRESISTIBLE (EL NÚCLEO) --- */
+        /* --- SECCIÓN OFERTA IRRESISTIBLE --- */
         .offer-section {
             background-color: var(--color-primario);
             color: var(--color-blanco);
         }
-
-        .offer-box {
-            border: 3px dashed var(--color-acento);
-            border-radius: 10px;
-            padding: 40px;
-            text-align: center;
-        }
         
-        .offer-box h2 {
+        .offer-section h2 {
             font-family: var(--fuente-titulos);
             font-size: 2.8rem;
             margin-bottom: 15px;
             text-align: center;
             color: var(--color-blanco);
         }
-        
-        .offer-box .tagline {
-            background-color: var(--color-acento);
+
+        .offer-section .offer-subtitle {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 25px auto;
+            text-align: center;
             color: var(--color-blanco);
-            display: inline-block;
-            padding: 5px 15px;
-            font-weight: 700;
-            border-radius: 5px;
-            margin-bottom: 20px;
         }
-        
-        .price {
-            font-size: 4.5rem;
-            font-weight: 700;
-            font-family: var(--fuente-titulos);
-            margin: 10px 0;
-            color: var(--color-acento); /* Precio con color de marca */
-        }
-        
+
         .what-you-get {
             list-style: none;
             margin: 25px auto;
             max-width: 500px;
             text-align: left;
             font-size: 1.1rem;
+            color: var(--color-blanco);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 40px;
         }
 
         .what-you-get li {
@@ -280,12 +272,125 @@
             color: var(--color-acento);
         }
 
-        .shipping-info {
-            font-weight: 700;
-            font-size: 1.2rem;
-            margin: 20px 0 30px 0;
-            display: block;
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+            align-items: stretch;
         }
+
+        .pricing-card {
+            background: var(--color-fondo-tarjeta);
+            color: var(--color-blanco);
+            border-radius: 10px;
+            padding: 30px 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            border: 2px solid #444;
+            transition: transform 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .pricing-card.popular {
+            border-color: var(--color-acento-popular);
+            position: relative;
+        }
+
+        .pricing-card .badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--color-acento-popular);
+            color: var(--color-blanco);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            font-family: var(--fuente-titulos);
+        }
+
+        .pricing-card h3 {
+            font-family: var(--fuente-titulos);
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--color-blanco);
+        }
+
+        .pricing-card-image {
+            max-width: 100%;
+            height: 120px;
+            object-fit: contain;
+            margin-bottom: 20px;
+        }
+
+        .price-details {
+            margin-bottom: 25px;
+        }
+        
+        .price-details .price-value {
+            font-family: var(--fuente-titulos);
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--color-blanco);
+            line-height: 1;
+        }
+        
+        .price-details .price-saving {
+            font-size: 1rem;
+            color: var(--color-acento-popular);
+            font-weight: 700;
+            margin-top: 5px;
+            height: 1.2em;
+        }
+
+        .price-details .price-per-unit {
+            font-size: 0.9rem;
+            color: #ccc;
+            height: 1.2em;
+        }
+
+        .pricing-card .cta-button {
+            margin-top: auto;
+            width: 100%;
+            max-width: 100%;
+            font-size: 1.2rem;
+            padding: 15px 20px;
+        }
+        
+        .wholesale-cta-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .wholesale-button {
+            display: inline-block;
+            background: transparent;
+            color: var(--color-blanco);
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            font-family: var(--fuente-cuerpo);
+            text-decoration: none;
+            border-radius: 8px;
+            text-align: center;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border: 2px solid var(--color-acento);
+            cursor: pointer;
+            max-width: 600px;
+            line-height: 1.4;
+        }
+
+        .wholesale-button:hover {
+            background-color: var(--color-acento);
+            color: var(--color-blanco);
+        }
+
 
         /* --- SECCIÓN TESTIMONIOS (PRUEBA SOCIAL REAL) --- */
         .testimonials h2 {
@@ -423,12 +528,12 @@
             font-size: 1.2rem;
             padding: 15px 25px;
         }
-
+        
         /* --- RESPONSIVE DESIGN --- */
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
             .hero .sub-headline { font-size: 1.2rem; }
-            .problem-section h2, .solution-section h2, .offer-box h2, .testimonials h2, .faq h2 { font-size: 2.2rem; }
+            .problem-section h2, .solution-section h2, .offer-section h2, .testimonials h2, .faq h2 { font-size: 2.2rem; }
             .container { padding: 40px 15px; }
         }
     </style>
@@ -445,7 +550,7 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 fbq('init', '841830128182783');
 fbq('track', 'PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
+<noscript><img height="1" width="1" style="display="none"
 src="https://www.facebook.com/tr?id=841830128182783&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
@@ -453,41 +558,42 @@ src="https://www.facebook.com/tr?id=841830128182783&ev=PageView&noscript=1"
 <body>
 
     <!-- ====================================================== -->
-    <!-- ============ SECCIÓN HERO: PROMESA DE BIENESTAR ======== -->
+    <!-- ====== SECCIÓN HERO: PROPÓSITO Y BENEFICIO CLAVE ====== -->
     <!-- ====================================================== -->
     <header class="hero">
         <div class="container">
             <span class="product-type-badge">SUPLEMENTO ALIMENTICIO</span>
             <img src="images/potes.png" alt="Pote de RENÖVA+ Suplemento Alimenticio" class="hero-image">
-            <h1>LA COMBINACIÓN DE NUTRIENTES PARA APOYAR TU VITALIDAD DIARIA</h1>
-            <p class="sub-headline">Descubre una fórmula avanzada con Colágeno, Resveratrol y Coenzima Q10, diseñada para aportar a la nutrición de tu piel, cabello y a tu energía general.</p>
+            <h1>UNA FÓRMULA DISEÑADA PARA LA FIRMEZA DE TU PIEL Y EL BIENESTAR ARTICULAR</h1>
+            <p class="sub-headline">Descubre el poder del Colágeno Peptan®, Resveratrol y Q10, ingredientes seleccionados para nutrir tu cuerpo desde adentro y apoyar un estilo de vida activo y juvenil.</p>
             <!-- BOTÓN DE ACCIÓN 1: WHATSAPP -->
-            <a href="https://wa.me/56959744777?text=Hola!%20quiero%20comenzar%20a%20potenciar%20mi%20bienestar%20con%20RENOVA+" target="_blank" class="cta-button">
-                SÍ, QUIERO POTENCIAR MI BIENESTAR
-                <span class="cta-subtitle">Haz tu pedido por WhatsApp</span>
+            <a href="#oferta" class="cta-button">
+                VER PLANES DE BIENESTAR
+                <span class="cta-subtitle">Elige tu Misión de 1, 2 o 3 meses</span>
             </a>
         </div>
     </header>
 
     <main>
         <!-- ====================================================== -->
-        <!-- ======== SECCIÓN DEL PROBLEMA (ENFOQUE BIENESTAR) ==== -->
+        <!-- ======== SECCIÓN DEL PROBLEMA (AGITACIÓN DIRECTA) ==== -->
         <!-- ====================================================== -->
         <section class="problem-section">
             <div class="container">
-                <h2>¿BUSCAS UNA MEJORA EN ESTOS ASPECTOS?</h2>
+                <h2>¿ESTÁS LUCHANDO CONTRA ESTO?</h2>
                 <ul class="problem-list">
-                    <li>Sientes que la apariencia de tu piel podría mejorar y tener un aspecto más nutrido.</li>
-                    <li>Buscas un apoyo para tu energía y vitalidad para enfrentar tus desafíos diarios.</li>
-                    <li>Notas que tu cabello y uñas necesitan un extra de nutrientes para sentirse fuertes.</li>
-                    <li>Quieres complementar tu alimentación con ingredientes de alta calidad para un bienestar integral.</li>
-                    <li>Estás listo/a para darle a tu cuerpo un soporte nutricional avanzado.</li>
+                    <li>Te miras al espejo y notas que tu piel perdió la firmeza y elasticidad que tenías antes.</li>
+                    <li>Notas que tu pelo está débil y tus uñas se quiebran con facilidad, impidiendo que crezcan sanas.</li>
+                    <li>Sientes que las rodillas, hombros o caderas te "pasan la cuenta" después de entrenar o al final del día.</li>
+                    <li>Tu energía no es la misma y sientes que necesitas un impulso para rendir al 100%.</li>
+                    <li>Has probado otros colágenos baratos que prometieron mucho pero no te dieron ningún resultado visible.</li>
+                    <li>Estás harto/a de sentirte promedio y quieres una solución real para verte y sentirte más joven.</li>
                 </ul>
             </div>
         </section>
 
         <!-- ====================================================== -->
-        <!-- ============ SECCIÓN DE LA SOLUCIÓN (INGREDIENTES) ==== -->
+        <!-- ============ SECCIÓN DE LA SOLUCIÓN (INGREDIentes) ==== -->
         <!-- ====================================================== -->
         <section class="solution-section">
             <div class="container">
@@ -530,27 +636,66 @@ src="https://www.facebook.com/tr?id=841830128182783&ev=PageView&noscript=1"
         </section>
 
         <!-- ====================================================== -->
-        <!-- ======== SECCIÓN OFERTA IRRESISTIBLE (Hormozi) ======== -->
+        <!-- ======== SECCIÓN OFERTA CON PLANES (VISUAL) ======== -->
         <!-- ====================================================== -->
         <section class="offer-section" id="oferta">
             <div class="container">
-                <div class="offer-box">
-                    <h2>TU PLAN DE BIENESTAR PARA 21 DÍAS</h2>
-                    <span class="tagline">OFERTA DE LANZAMIENTO EXCLUSIVA</span>
-                    <ul class="what-you-get">
-                        <li>Un pote de RENÖVA+ con 21 porciones.</li>
-                        <li>Aporte de nutrientes clave para la piel.</li>
-                        <li>Ingredientes para tu energía y vitalidad.</li>
-                        <li>Soporte para cabello y uñas.</li>
-                        <li>Fórmula con 0% azúcar y 11g de proteína.</li>
-                    </ul>
-                    <div class="price">$49.990 CLP</div>
-                    <strong class="shipping-info">
-                        + ENVÍO A TODO CHILE POR SOLO $3.990
-                    </strong>
-                    <!-- BOTÓN DE ACCIÓN 2: WHATSAPP -->
-                    <a href="https://wa.me/56959744777?text=Hola!%20quiero%20comenzar%20a%20potenciar%20mi%20bienestar%20con%20RENOVA+" target="_blank" class="cta-button">
-                        ¡LO QUIERO! PEDIR POR WHATSAPP
+                <h2>INICIA TU PLAN DE BIENESTAR CON RENÖVA+</h2>
+                <p class="offer-subtitle">Elige el plan que mejor se adapte a tu Misión. Todos los planes incluyen el pack de bienvenida completo:</p>
+                <ul class="what-you-get">
+                    <li>✅ <strong>Guía PDF "Los 5 Alimentos Aliados de tu Piel".</strong> (Valor: $10.000)</li>
+                    <li>✅ <strong>Apoyo Personalizado por WhatsApp.</strong> (Valor: Infinito)</li>
+                    <li>✅ <strong>Acceso a Comunidad Privada.</strong> (Valor: $30.000)</li>
+                </ul>
+                
+                <div class="pricing-grid">
+                    <!-- Plan 1 Mes -->
+                    <div class="pricing-card">
+                        <h3>PACK INICIO</h3>
+                        <img src="images/1pote.png" alt="Plan de 1 Mes de RENÖVA+" class="pricing-card-image">
+                        <div class="price-details">
+                            <div class="price-value">$54.990</div>
+                            <div class="price-saving">Envío Incluido</div>
+                            <div class="price-per-unit">&nbsp;</div>
+                        </div>
+                        <a href="https://wa.me/56959744777?text=Hola!%20Quiero%20comprar%20el%20Pack%20Inicio%20de%20REN%C3%96VA%2B%20(1%20unidad)%20por%20$54.990." target="_blank" class="cta-button">
+                            COMPRAR 1 UNIDAD
+                        </a>
+                    </div>
+
+                    <!-- Plan 2 Meses (Popular) -->
+                    <div class="pricing-card popular">
+                        <div class="badge">MÁS POPULAR</div>
+                        <h3>PACK 2 MESES</h3>
+                        <img src="images/2pote.png" alt="Plan de 2 Meses de RENÖVA+" class="pricing-card-image">
+                        <div class="price-details">
+                             <div class="price-value">$102.480</div>
+                            <div class="price-saving">Te ahorras $7.500</div>
+                            <div class="price-per-unit">$51.240 por unidad</div>
+                        </div>
+                        <a href="https://wa.me/56959744777?text=Hola!%20Quiero%20comprar%20el%20Pack%202%20Meses%20de%20REN%C3%96VA%2B%20(2%20unidades)%20por%20$102.480." target="_blank" class="cta-button cta-button-popular">
+                            COMPRAR 2 UNIDADES
+                        </a>
+                    </div>
+
+                    <!-- Plan 3 Meses -->
+                    <div class="pricing-card">
+                        <h3>PACK 3 MESES</h3>
+                        <img src="images/3pote.png" alt="Plan de 3 Meses de RENÖVA+" class="pricing-card-image">
+                        <div class="price-details">
+                            <div class="price-value">$149.970</div>
+                            <div class="price-saving">Te ahorras $15.000</div>
+                            <div class="price-per-unit">$49.990 por unidad</div>
+                        </div>
+                        <a href="https://wa.me/56959744777?text=Hola!%20Quiero%20comprar%20el%20Pack%203%20Meses%20de%20REN%C3%96VA%2B%20(3%20unidades)%20por%20$149.970." target="_blank" class="cta-button">
+                            COMPRAR 3 UNIDADES
+                        </a>
+                    </div>
+                </div>
+                <!-- Botón de Venta al por Mayor -->
+                <div class="wholesale-cta-container">
+                    <a href="https://wa.me/56959744777?text=Hola!%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20oportunidad%20de%20comprar%20al%20por%20mayor%20con%20descuento." target="_blank" class="wholesale-button">
+                        ¿Eres comerciante o buscas un descuento mayor? Conoce la oportunidad de comprar al por mayor con un 35% a 50% de descuento.
                     </a>
                 </div>
             </div>
@@ -625,7 +770,7 @@ src="https://www.facebook.com/tr?id=841830128182783&ev=PageView&noscript=1"
     <!-- ============== BOTÓN FIJO INFERIOR ===================== -->
     <!-- ====================================================== -->
     <div class="fixed-cta">
-        <a href="https://wa.me/56959744777?text=Hola!%20quiero%20comenzar%20a%20potenciar%20mi%20bienestar%20con%20RENOVA+" target="_blank" class="cta-button">SÍ, QUIERO POTENCIAR MI BIENESTAR</a>
+        <a href="#oferta" class="cta-button">VER PLANES DE BIENESTAR</a>
     </div>
 
     <footer>
