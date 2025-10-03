@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es-CL">
 <head>
@@ -249,7 +250,7 @@
         .what-you-get {
             list-style: none;
             margin: 25px auto;
-            max-width: 500px;
+            max-width: 600px; 
             text-align: left;
             font-size: 1.1rem;
             color: var(--color-blanco);
@@ -258,20 +259,23 @@
             padding: 20px;
             margin-bottom: 40px;
         }
-
-        .what-you-get li {
-            padding: 8px 0 8px 35px;
-            position: relative;
-        }
         
-        .what-you-get li::before {
-            content: '✅';
-            position: absolute;
-            left: 0;
-            top: 8px;
+        .what-you-get .pack-title {
+            font-family: var(--fuente-titulos);
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 15px;
             color: var(--color-acento);
         }
 
+        .what-you-get ul {
+            list-style: none;
+        }
+
+        .what-you-get li {
+            padding: 8px 0;
+        }
+        
         .pricing-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -640,25 +644,31 @@ src="https://www.facebook.com/tr?id=841830128182783&ev=PageView&noscript=1"
         <!-- ====================================================== -->
         <section class="offer-section" id="oferta">
             <div class="container">
-                <h2>INICIA TU PLAN DE BIENESTAR CON RENÖVA+</h2>
-                <p class="offer-subtitle">Elige el plan que mejor se adapte a tu Misión. Todos los planes incluyen el pack de bienvenida completo:</p>
-                <ul class="what-you-get">
-                    <li>✅ <strong>Guía PDF "Los 5 Alimentos Aliados de tu Piel".</strong> (Valor: $10.000)</li>
-                    <li>✅ <strong>Apoyo Personalizado por WhatsApp.</strong> (Valor: Infinito)</li>
-                    <li>✅ <strong>Acceso a Comunidad Privada.</strong> (Valor: $30.000)</li>
-                </ul>
+                <h2>INICIA TU MISIÓN DE BIENESTAR</h2>
+                <p class="offer-subtitle">Cada compra es un "Pack de Bienvenida" con todo lo que necesitas para empezar. ¡Elige por cuántos meses quieres asegurar tu Misión y ahorra!</p>
                 
+                <div class="what-you-get">
+                    <div class="pack-title">TODO ESTO INCLUYE TU PACK DE BIENVENIDA:</div>
+                    <ul>
+                        <li>✅ <strong>RENÖVA+ (1 Mes de Suministro)</strong> - Valor: $49.990</li>
+                        <li>✅ <strong>Envío a todo Chile</strong> - <span style="text-decoration: line-through;">$5.490</span> <strong style="color: var(--color-acento-popular);">GRATIS</strong></li>
+                        <li>✅ <strong>BONUS #1: Guía PDF "Los 5 Alimentos Aliados de tu Piel"</strong> - Valor: $10.000</li>
+                        <li>✅ <strong>BONUS #2: Apoyo Personalizado por WhatsApp</strong> - Valor: Incalculable</li>
+                        <li>✅ <strong>BONUS #3: Acceso a Comunidad Privada</strong> - Valor: $30.000</li>
+                    </ul>
+                </div>
+
                 <div class="pricing-grid">
                     <!-- Plan 1 Mes -->
                     <div class="pricing-card">
                         <h3>PACK INICIO</h3>
-                        <img src="images/1pote.png" alt="Plan de 1 Mes de RENÖVA+" class="pricing-card-image">
+                        <img src="https://placehold.co/300x200/1e1e1e/FFFFFF?text=1+Pote" alt="Plan de 1 Mes de RENÖVA+" class="pricing-card-image">
                         <div class="price-details">
                             <div class="price-value">$54.990</div>
-                            <div class="price-saving">Envío Incluido</div>
+                            <div class="price-saving" style="color: #fff; font-weight: 700;">Envío Incluido</div>
                             <div class="price-per-unit">&nbsp;</div>
                         </div>
-                        <a href="https://wa.me/56959744777?text=Hola!%20Quiero%20comprar%20el%20Pack%20Inicio%20de%20REN%C3%96VA%2B%20(1%20unidad)%20por%20$54.990." target="_blank" class="cta-button">
+                        <a href="https://wa.me/56959744777?text=Hola!%20Quiero%20comprar%20el%20Pack%20de%20Bienvenida%20REN%C3%96VA%2B%20-%201%20Mes%20por%20$54.990." target="_blank" class="cta-button">
                             COMPRAR 1 UNIDAD
                         </a>
                     </div>
@@ -667,13 +677,13 @@ src="https://www.facebook.com/tr?id=841830128182783&ev=PageView&noscript=1"
                     <div class="pricing-card popular">
                         <div class="badge">MÁS POPULAR</div>
                         <h3>PACK 2 MESES</h3>
-                        <img src="images/2pote.png" alt="Plan de 2 Meses de RENÖVA+" class="pricing-card-image">
+                        <img src="https://placehold.co/300x200/1e1e1e/FFFFFF?text=2+Potes" alt="Plan de 2 Meses de RENÖVA+" class="pricing-card-image">
                         <div class="price-details">
                              <div class="price-value">$102.480</div>
                             <div class="price-saving">Te ahorras $7.500</div>
                             <div class="price-per-unit">$51.240 por unidad</div>
                         </div>
-                        <a href="https://wa.me/56959744777?text=Hola!%20Quiero%20comprar%20el%20Pack%202%20Meses%20de%20REN%C3%96VA%2B%20(2%20unidades)%20por%20$102.480." target="_blank" class="cta-button cta-button-popular">
+                        <a href="https://wa.me/56959744777?text=Hola!%20Quiero%20comprar%20el%20Pack%20de%20Bienvenida%20REN%C3%96VA%2B%20-%202%20Meses%20por%20$102.480." target="_blank" class="cta-button cta-button-popular">
                             COMPRAR 2 UNIDADES
                         </a>
                     </div>
@@ -681,13 +691,13 @@ src="https://www.facebook.com/tr?id=841830128182783&ev=PageView&noscript=1"
                     <!-- Plan 3 Meses -->
                     <div class="pricing-card">
                         <h3>PACK 3 MESES</h3>
-                        <img src="images/3pote.png" alt="Plan de 3 Meses de RENÖVA+" class="pricing-card-image">
+                        <img src="https://placehold.co/300x200/1e1e1e/FFFFFF?text=3+Potes" alt="Plan de 3 Meses de RENÖVA+" class="pricing-card-image">
                         <div class="price-details">
                             <div class="price-value">$149.970</div>
                             <div class="price-saving">Te ahorras $15.000</div>
                             <div class="price-per-unit">$49.990 por unidad</div>
                         </div>
-                        <a href="https://wa.me/56959744777?text=Hola!%20Quiero%20comprar%20el%20Pack%203%20Meses%20de%20REN%C3%96VA%2B%20(3%20unidades)%20por%20$149.970." target="_blank" class="cta-button">
+                        <a href="https://wa.me/56959744777?text=Hola!%20Quiero%20comprar%20el%20Pack%20de%20Bienvenida%20REN%C3%96VA%2B%20-%203%20Meses%20por%20$149.970." target="_blank" class="cta-button">
                             COMPRAR 3 UNIDADES
                         </a>
                     </div>
