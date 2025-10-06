@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Título enfocado en el resultado: rendimiento y enfoque -->
-    <title>Desbloquea tu Máximo Rendimiento: Energía y Enfoque Sin Límites</title>
+    <!-- Título optimizado para el objetivo del producto -->
+    <title>E-BOOST: Potencia, Enfoque y Energía Para Tu Día</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,10 +15,11 @@
         :root {
             --color-primario: #111111;
             --color-secundario: #f9f9f9;
-            /* Color de acento principal extraído de la marca E-BOOST */
-            --color-acento: #F37021; 
+            --color-acento: #F37021; /* Naranja energético para E-BOOST */
+            --color-acento-popular: #28a745; 
             --color-texto: #333;
             --color-blanco: #ffffff;
+            --color-fondo-tarjeta: #1e1e1e;
             --fuente-titulos: 'Oswald', sans-serif;
             --fuente-cuerpo: 'Roboto', sans-serif;
         }
@@ -35,7 +36,6 @@
             color: var(--color-texto);
             background-color: var(--color-blanco);
             line-height: 1.7;
-            /* Espacio en la parte inferior para que el botón fijo no tape el contenido */
             padding-bottom: 100px;
         }
 
@@ -45,7 +45,6 @@
             padding: 50px 20px;
         }
         
-        /* --- BOTÓN DE ACCIÓN (CTA): GRANDE, CLARO, CON COLOR DE MARCA --- */
         .cta-button {
             display: inline-block;
             background: var(--color-acento);
@@ -58,27 +57,29 @@
             border-radius: 8px;
             text-align: center;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
-            box-shadow: 0 5px 20px rgba(243, 112, 33, 0.5);
+            box-shadow: 0 5px 20px rgba(0,0,0, 0.3);
             border: none;
             cursor: pointer;
             width: 100%;
-            max-width: 450px;
+            max-width: 400px;
         }
 
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(243, 112, 33, 0.7);
+        }
+
+        .cta-button-popular {
+            background: var(--color-acento-popular);
         }
         
         .cta-subtitle {
             display: block;
             font-size: 0.9rem;
             margin-top: 8px;
-            font-weight: 400;
+            font-weight: 700;
             opacity: 0.9;
         }
 
-        /* --- SECCIÓN HERO: PROMESA DE RENDIMIENTO --- */
         .hero {
             background-color: var(--color-secundario);
             text-align: center;
@@ -116,13 +117,12 @@
         }
         
         .hero-image {
-            max-width: 350px;
+            max-width: 300px;
             width: 100%;
             margin-bottom: 30px;
             filter: drop-shadow(0 10px 15px rgba(0,0,0,0.15));
         }
         
-        /* --- SECCIÓN DE AGITACIÓN DEL PROBLEMA (ENFOQUE EN RENDIMIENTO) --- */
         .problem-section {
             background-color: var(--color-primario);
             color: var(--color-blanco);
@@ -156,7 +156,6 @@
             font-size: 1.5rem;
         }
         
-        /* --- SECCIÓN DE INGREDIENTES (LA SOLUCIÓN LÓGICA) --- */
         .solution-section h2 {
             text-align: center;
             font-family: var(--fuente-titulos);
@@ -190,8 +189,7 @@
             margin-bottom: 10px;
             color: var(--color-primario);
         }
-        
-        /* Estilos para la nueva imagen */
+
         .extra-image-container {
             text-align: center;
             margin: 50px 0;
@@ -221,73 +219,176 @@
             border: 1px solid #ddd;
         }
 
-        /* --- SECCIÓN OFERTA IRRESISTIBLE (EL NÚCLEO) --- */
         .offer-section {
             background-color: var(--color-primario);
             color: var(--color-blanco);
         }
-
-        .offer-box {
-            border: 3px dashed var(--color-acento);
-            border-radius: 10px;
-            padding: 40px;
-            text-align: center;
-        }
         
-        .offer-box h2 {
+        .offer-section h2 {
             font-family: var(--fuente-titulos);
             font-size: 2.8rem;
             margin-bottom: 15px;
             text-align: center;
             color: var(--color-blanco);
         }
-        
-        .offer-box .tagline {
-            background-color: var(--color-acento);
+
+        .offer-section .offer-subtitle {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 25px auto;
+            text-align: center;
             color: var(--color-blanco);
-            display: inline-block;
-            padding: 5px 15px;
-            font-weight: 700;
-            border-radius: 5px;
-            margin-bottom: 20px;
         }
-        
-        .price {
-            font-size: 4.5rem;
-            font-weight: 700;
-            font-family: var(--fuente-titulos);
-            margin: 10px 0;
-            color: var(--color-acento);
-        }
-        
+
         .what-you-get {
             list-style: none;
             margin: 25px auto;
-            max-width: 500px;
+            max-width: 600px; 
             text-align: left;
             font-size: 1.1rem;
+            color: var(--color-blanco);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .what-you-get .pack-title {
+            font-family: var(--fuente-titulos);
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 15px;
+            color: var(--color-acento);
+        }
+
+        .what-you-get ul {
+            list-style: none;
+            padding: 0;
         }
 
         .what-you-get li {
-            padding: 8px 0 8px 35px;
-            position: relative;
+            padding: 8px 0;
         }
         
-        .what-you-get li::before {
-            content: '⚡';
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+            align-items: stretch;
+        }
+
+        .pricing-card {
+            background: var(--color-fondo-tarjeta);
+            color: var(--color-blanco);
+            border-radius: 10px;
+            padding: 30px 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            border: 2px solid #444;
+            transition: transform 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .pricing-card.popular {
+            border-color: var(--color-acento-popular);
+            position: relative;
+        }
+
+        .pricing-card .badge {
             position: absolute;
-            left: 0;
-            top: 8px;
-        }
-
-        .shipping-info {
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--color-acento-popular);
+            color: var(--color-blanco);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.9rem;
             font-weight: 700;
-            font-size: 1.2rem;
-            margin: 20px 0 30px 0;
-            display: block;
+            font-family: var(--fuente-titulos);
         }
 
-        /* --- SECCIÓN TESTIMONIOS --- */
+        .pricing-card h3 {
+            font-family: var(--fuente-titulos);
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--color-blanco);
+        }
+
+        .pricing-card-image {
+            max-width: 100%;
+            height: 260px;
+            object-fit: contain;
+            margin-bottom: 20px;
+        }
+
+        .price-details {
+            margin-bottom: 25px;
+        }
+        
+        .price-details .price-value {
+            font-family: var(--fuente-titulos);
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--color-blanco);
+            line-height: 1;
+        }
+        
+        .price-details .price-saving {
+            font-size: 1rem;
+            color: var(--color-acento-popular);
+            font-weight: 700;
+            margin-top: 5px;
+            height: 1.2em;
+        }
+
+        .price-details .price-per-unit {
+            font-size: 0.9rem;
+            color: #ccc;
+            height: 1.2em;
+        }
+
+        .pricing-card .cta-button {
+            margin-top: auto;
+            width: 100%;
+            max-width: 100%;
+            font-size: 1.2rem;
+            padding: 15px 20px;
+        }
+        
+        .wholesale-cta-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .wholesale-button {
+            display: inline-block;
+            background: transparent;
+            color: var(--color-blanco);
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            font-family: var(--fuente-cuerpo);
+            text-decoration: none;
+            border-radius: 8px;
+            text-align: center;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border: 2px solid var(--color-acento);
+            cursor: pointer;
+            max-width: 600px;
+            line-height: 1.4;
+        }
+
+        .wholesale-button:hover {
+            background-color: var(--color-acento);
+            color: var(--color-blanco);
+        }
+
         .testimonials h2 {
             text-align: center;
             font-family: var(--fuente-titulos);
@@ -323,7 +424,6 @@
             color: var(--color-acento);
         }
         
-        /* --- SECCIÓN FAQ --- */
         .faq h2 {
             text-align: center;
             font-family: var(--fuente-titulos);
@@ -371,7 +471,6 @@
             padding-top: 15px;
         }
         
-        /* --- SECCIÓN DE ADVERTENCIAS LEGALES --- */
         .legal-disclaimer {
             background-color: #f8f9fa;
             border-top: 2px solid #dee2e6;
@@ -396,7 +495,6 @@
             line-height: 1.5;
         }
 
-        /* --- FOOTER --- */
         footer {
             background: var(--color-primario);
             color: var(--color-blanco);
@@ -404,7 +502,6 @@
             padding: 30px 20px;
         }
 
-        /* --- BOTÓN FIJO EN MÓVIL Y ESCRITORIO --- */
         .fixed-cta {
             display: block;
             position: fixed;
@@ -423,12 +520,11 @@
             font-size: 1.2rem;
             padding: 15px 25px;
         }
-
-        /* --- RESPONSIVE DESIGN --- */
+        
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
             .hero .sub-headline { font-size: 1.2rem; }
-            .problem-section h2, .solution-section h2, .offer-box h2, .testimonials h2, .faq h2 { font-size: 2.2rem; }
+            .problem-section h2, .solution-section h2, .offer-section h2, .testimonials h2, .faq h2 { font-size: 2.2rem; }
             .container { padding: 40px 15px; }
         }
     </style>
@@ -445,172 +541,190 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 fbq('init', '841830128182783');
 fbq('track', 'PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
+<noscript><img height="1" width="1" style="display="none"
 src="https://www.facebook.com/tr?id=841830128182783&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 </head>
 <body>
 
-    <!-- ====================================================== -->
-    <!-- ============ SECCIÓN HERO: PROMESA DE RENDIMIENTO ====== -->
-    <!-- ====================================================== -->
     <header class="hero">
         <div class="container">
             <span class="product-type-badge">SUPLEMENTO ALIMENTICIO</span>
-            <img src="images/caja eboost.png" alt="Caja de E-BOOST Potencia, Enfoque y Energía" class="hero-image">
-            <h1>DESBLOQUEA TU MÁXIMO RENDIMIENTO MENTAL Y FÍSICO</h1>
-            <p class="sub-headline">La fórmula de energía inteligente que combate la fatiga y agudiza tu enfoque sin el nerviosismo ni la caída abrupta de las bebidas energéticas tradicionales.</p>
-            <!-- BOTÓN DE ACCIÓN 1: WHATSAPP -->
-            <a href="https://wa.me/56959744777?text=Hola!%20quiero%20comenzar%20a%20desbloquear%20mi%20rendimiento%20con%20E-BOOST" target="_blank" class="cta-button">
-                SÍ, QUIERO ENERGÍA Y ENFOQUE AHORA
-                <span class="cta-subtitle">Haz tu pedido por WhatsApp</span>
+            <!-- Asegúrate de tener una imagen para E-BOOST en la ruta 'images/eboost-caja.png' -->
+            <img src="images/CAJA EBOOST.png" alt="Caja de E-BOOST" class="hero-image">
+            <h1>LA FÓRMULA PARA DESBLOQUEAR TU MÁXIMO RENDIMIENTO DIARIO</h1>
+            <p class="sub-headline">Descubre E-BOOST, una combinación de Aminoácidos, Guaraná, Té Negro y Yerba Mate, diseñada para reducir la fatiga y potenciar tu enfoque y concentración.</p>
+            <a href="#oferta" class="cta-button">
+                VER PLANES DE RENDIMIENTO
+                <span class="cta-subtitle">Elige tu Misión de 1, 2 o 3 meses</span>
             </a>
         </div>
     </header>
 
     <main>
-        <!-- ====================================================== -->
-        <!-- ======== SECCIÓN DEL PROBLEMA (ENFOQUE RENDIMIENTO) ==== -->
-        <!-- ====================================================== -->
         <section class="problem-section">
             <div class="container">
-                <h2>¿ALGUNO DE ESTOS PUNTOS DOMINA TU DÍA?</h2>
+                <h2>¿TE DOMINA EL CANSANCIO Y LA FALTA DE ENFOQUE?</h2>
                 <ul class="problem-list">
-                    <li>La "niebla mental" aparece después del almuerzo y destruye tu productividad por la tarde.</li>
-                    <li>Dependes de múltiples tazas de café solo para funcionar, sufriendo el nerviosismo y la posterior caída.</li>
-                    <li>Procrastinas tareas importantes porque sientes que no tienes la energía mental para comenzarlas.</li>
-                    <li>Te sientes agotado y sin "batería" mucho antes de que termine tu jornada laboral o de estudios.</li>
-                    <li>Buscas una ventaja competitiva para rendir al máximo en tu trabajo, estudios o entrenamientos.</li>
+                    <li>Sufres de "niebla mental" y te cuesta concentrarte en tareas importantes.</li>
+                    <li>Dependes del café o bebidas energéticas que te dejan con nerviosismo y una posterior caída de energía.</li>
+                    <li>Sientes un agotamiento o "burnout" que te impide rendir al máximo en tu trabajo, estudios o entrenamientos.</li>
+                    <li>La fatiga te gana la batalla mucho antes de que termine el día.</li>
+                    <li>Buscas una fuente de energía limpia y sostenida para tener una ventaja competitiva.</li>
                 </ul>
             </div>
         </section>
 
-        <!-- ====================================================== -->
-        <!-- ============ SECCIÓN DE LA SOLUCIÓN (INGREDIENTES) ==== -->
-        <!-- ====================================================== -->
         <section class="solution-section">
             <div class="container">
-                <h2>LA CIENCIA DETRÁS DE LA ENERGÍA INTELIGENTE</h2>
+                <h2>INGREDIENTES CLAVE PARA TU MISIÓN DE ENERGÍA</h2>
                 <div class="ingredient-grid">
                     <div class="ingredient-card">
                         <div class="icon">🌿</div>
-                        <h3>Guaraná y Yerba Mate</h3>
-                        <p>Fuentes naturales de cafeína que proporcionan energía sostenida y alerta mental, sin los peaks y caídas bruscas.</p>
+                        <h3>Yerba Mate y Té Negro</h3>
+                        <p>Fuentes naturales de cafeína y antioxidantes que proporcionan energía sostenida y mejoran el estado de alerta.</p>
                     </div>
                     <div class="ingredient-card">
-                        <div class="icon">🍃</div>
-                        <h3>Té Negro</h3>
-                        <p>Contiene L-teanina, un aminoácido que promueve un estado de calma y enfoque, contrarrestando el nerviosismo.</p>
+                        <div class="icon">🍇</div>
+                        <h3>Guaraná</h3>
+                        <p>Conocido por su capacidad para reducir la fatiga y mejorar el enfoque gracias a su perfil único de estimulantes naturales.</p>
                     </div>
                     <div class="ingredient-card">
                         <div class="icon">💪</div>
                         <h3>Aminoácidos (BCAAs)</h3>
-                        <p>Valina, Leucina e Isoleucina. Contribuyen a reducir la sensación de fatiga durante la actividad intensa.</p>
+                        <p>Valina, Leucina e Isoleucina. Ayudan a disminuir la percepción de fatiga durante la actividad física y mental.</p>
                     </div>
                     <div class="ingredient-card">
                         <div class="icon">💡</div>
-                        <h3>Complejo Vitamínico</h3>
-                        <p>Un mix completo de vitaminas que actúan como combustible para tu cerebro y apoyan la producción de energía.</p>
+                        <h3>Mix Vitamínico Completo</h3>
+                        <p>Un blend de vitaminas esenciales que apoyan la producción de energía celular y la función cognitiva.</p>
                     </div>
                 </div>
-
-                <!-- IMAGEN ADICIONAL INSERTADA -->
                 <div class="extra-image-container">
-                    <img src="images/sachet eboost.png" alt="Beneficios visuales de E-BOOST">
+                     <!-- Asegúrate de tener una imagen para E-BOOST en la ruta 'images/eboost-beneficios.png' -->
+                    <img src="images/SACHET EBOOST.png" alt="Beneficios visuales de E-BOOST">
                 </div>
-
                 <div class="trust-badges">
-                    <span class="trust-badge">✓ Formato en 28 Sachets</span>
-                    <span class="trust-badge">✓ Energía Inteligente</span>
+                    <span class="trust-badge">✓ 28 Porciones</span>
                     <span class="trust-badge">✓ 0% Azúcar</span>
+                    <span class="trust-badge">✓ 7g por Sachet</span>
                     <span class="trust-badge">✓ Solo 2 Calorías</span>
                 </div>
             </div>
         </section>
 
-        <!-- ====================================================== -->
-        <!-- ======== SECCIÓN OFERTA IRRESISTIBLE (Hormozi) ======== -->
-        <!-- ====================================================== -->
         <section class="offer-section" id="oferta">
             <div class="container">
-                <div class="offer-box">
-                    <h2>TU ARSENAL PARA 28 DÍAS DE ALTO RENDIMIENTO</h2>
-                    <span class="tagline">OFERTA DE LANZAMIENTO EXCLUSIVA</span>
-                    <ul class="what-you-get">
-                        <li>1 Caja de E-BOOST con 28 sachets individuales.</li>
-                        <li>Energía limpia y sostenida para dominar tu día.</li>
-                        <li>Mayor capacidad de enfoque y concentración.</li>
-                        <li>Soporte para combatir la fatiga mental y el "burnout".</li>
-                        <li>Fórmula con 0% azúcar y delicioso sabor a mandarina.</li>
+                <h2>INICIA TU MISIÓN DE MÁXIMO RENDIMIENTO</h2>
+                <p class="offer-subtitle">Cada compra es un "Pack de Bienvenida" con todo lo que necesitas para empezar. ¡Elige por cuántos meses quieres asegurar tu Misión y ahorra!</p>
+                
+                <div class="what-you-get">
+                    <div class="pack-title">TODO ESTO INCLUYE TU PACK DE BIENVENIDA E-BOOST:</div>
+                    <ul>
+                        <li>✅ <strong>E-BOOST (Caja con 28 Sachets)</strong> - Valor: $39.990</li>
+                        <li>✅ <strong>Envío a todo Chile</strong> - (<span style="text-decoration: line-through;">$5.490</span> <strong style="color: var(--color-acento);">GRATIS</strong>)</li>
+                        <li>✅ <strong>BONUS #1: Guía PDF "Hackea tu Productividad"</strong> - Valor: $10.000</li>
+                        <li>✅ <strong>BONUS #2: Apoyo Personalizado por WhatsApp</strong> - Valor: Incalculable</li>
+                        <li>✅ <strong>BONUS #3: Acceso a Comunidad de Alto Rendimiento</strong> - Valor: $30.000</li>
                     </ul>
-                    <div class="price">$39.990 CLP</div>
-                    <strong class="shipping-info">
-                        + ENVÍO A TODO CHILE POR SOLO $3.990
-                    </strong>
-                    <!-- BOTÓN DE ACCIÓN 2: WHATSAPP -->
-                    <a href="https://wa.me/56959744777?text=Hola!%20quiero%20comenzar%20a%20desbloquear%20mi%20rendimiento%20con%20E-BOOST" target="_blank" class="cta-button">
-                        ¡LO QUIERO! PEDIR MI CAJA POR WHATSAPP
+                </div>
+
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h3>PACK 1 MES</h3>
+                        <img src="images/1caja.png" alt="Plan de 1 Mes de E-BOOST" class="pricing-card-image">
+                        <div class="price-details">
+                            <div class="price-value">$44.990</div>
+                            <div class="price-saving" style="color:var(--color-acento-popular);">¡Ahorras $8.000!</div>
+                            <div class="price-per-unit">&nbsp;</div>
+                        </div>
+                        <a href="https://wa.me/56959744777?text=Hola!%20Quiero%20comprar%20el%20Pack%20de%20Bienvenida%20E-BOOST%20-%201%20Mes%20por%20$44.990." target="_blank" class="cta-button">
+                            COMPRAR 1 UNIDAD
+                        </a>
+                    </div>
+
+                    <div class="pricing-card popular">
+                        <div class="badge">MÁS POPULAR</div>
+                        <h3>PACK 2 MESES</h3>
+                        <img src="images/2cajas.png" alt="Plan de 2 Meses de E-BOOST" class="pricing-card-image">
+                        <div class="price-details">
+                             <div class="price-value">$82.480</div>
+                            <div class="price-saving">¡Ahorras $23.500!</div>
+                            <div class="price-per-unit">$41.240 por unidad</div>
+                        </div>
+                        <a href="https://wa.me/56959744777?text=Hola!%20Quiero%20comprar%20el%20Pack%20de%20Bienvenida%20E-BOOST%20-%202%20Meses%20por%20$82.480." target="_blank" class="cta-button cta-button-popular">
+                            COMPRAR 2 UNIDADES
+                        </a>
+                    </div>
+
+                    <div class="pricing-card">
+                        <h3>PACK 3 MESES</h3>
+                        <img src="images/3cajas.png" alt="Plan de 3 Meses de E-BOOST" class="pricing-card-image">
+                        <div class="price-details">
+                            <div class="price-value">$119.970</div>
+                            <div class="price-saving">¡Ahorras $39.000!</div>
+                            <div class="price-per-unit">$39.990 por unidad</div>
+                        </div>
+                        <a href="https://wa.me/56959744777?text=Hola!%20Quiero%20comprar%20el%20Pack%20de%20Bienvenida%20E-BOOST%20-%203%20Meses%20por%20$119.970." target="_blank" class="cta-button">
+                            COMPRAR 3 UNIDADES
+                        </a>
+                    </div>
+                </div>
+                <div class="wholesale-cta-container">
+                    <a href="https://wa.me/56959744777?text=Hola!%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20oportunidad%20de%20comprar%20E-BOOST%20al%20por%20mayor." target="_blank" class="wholesale-button">
+                        ¿Eres comerciante o buscas un descuento mayor? Conoce la oportunidad de comprar al por mayor con un 35% a 50% de descuento.
                     </a>
                 </div>
             </div>
         </section>
         
-        <!-- ====================================================== -->
-        <!-- ============== SECCIÓN TESTIMONIOS =================== -->
-        <!-- ====================================================== -->
         <section class="testimonials">
             <div class="container">
-                <h2>PERSONAS REALES, RENDIMIENTO REAL</h2>
+                <h2>ELLOS YA DESBLOQUEARON SU POTENCIAL</h2>
                 <div class="testimonial-grid">
                     <div class="testimonial-card">
-                        <p>"Como estudiante de derecho, E-Boost cambió mis tardes de estudio. Paso de la niebla mental a una claridad increíble en minutos. Es mi arma secreta para los exámenes. ¡Y el sabor es buenísimo!"</p>
+                        <p>"E-BOOST cambió mis tardes de estudio. Paso de la niebla mental a una claridad increíble en minutos. Es mi arma secreta para los exámenes. ¡Y el sabor a mandarina es buenísimo!"</p>
                         <p class="author">- Javier M., Estudiante</p>
                     </div>
                     <div class="testimonial-card">
-                        <p>"Soy emprendedor y mis días son una locura. El café me dejaba ansioso. Con E-Boost tengo la energía para todo el día, pero con un enfoque tranquilo que me permite tomar mejores decisiones. 100% recomendado."</p>
+                        <p>"Soy emprendedor y mis días son una locura. El café me dejaba ansioso. Con E-BOOST tengo la energía para todo el día, pero con un enfoque tranquilo que me permite tomar mejores decisiones. 100% recomendado."</p>
                         <p class="author">- Sofía L., Emprendedora</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ====================================================== -->
-        <!-- ====== SECCIÓN PREGUNTAS FRECUENTES (FAQ) ============ -->
-        <!-- ====================================================== -->
         <section class="faq">
             <div class="container">
                 <h2>TUS DUDAS, RESUELTAS.</h2>
                 <div class="faq-item">
                     <div class="faq-question">¿Es como una bebida energética tradicional?</div>
                     <div class="faq-answer">
-                        <p>No. E-BOOST está diseñado para darte energía y enfoque sin el exceso de azúcar, las altas dosis de cafeína sintética y los ingredientes artificiales de las bebidas energéticas comunes. El resultado es energía limpia, sin nerviosismo ni caídas bruscas.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">¿Cuándo es el mejor momento para tomarlo?</div>
-                    <div class="faq-answer">
-                        <p>Es ideal para tomarlo 30 minutos antes de una tarea que requiera alta concentración (trabajo, estudio, entrenamiento) o en la mañana para empezar el día con máxima energía y claridad mental.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">¿Contiene azúcar?</div>
-                    <div class="faq-answer">
-                        <p>No. E-BOOST tiene 0 gramos de azúcar y está endulzado con estevia. Cada sachet contiene solo 2 calorías, por lo que no afecta tu plan de alimentación.</p>
+                        <p>No. E-BOOST está diseñado para darte energía y enfoque sin el exceso de azúcar y los ingredientes artificiales de las bebidas energéticas comunes. Nuestra fórmula con fuentes naturales de cafeína y aminoácidos busca una energía limpia, sin nerviosismo ni caídas bruscas.</p>
                     </div>
                 </div>
                  <div class="faq-item">
-                    <div class="faq-question">¿Cómo se prepara?</div>
+                    <div class="faq-question">¿Cuándo es el mejor momento para tomarlo?</div>
                     <div class="faq-answer">
-                        <p>Es muy fácil. Vierte el contenido de un sachet (7g) en un vaso o botella con 250 ml de agua fría, agita bien y disfruta de su refrescante sabor a mandarina.</p>
+                        <p>Es ideal para tomarlo 30 minutos antes de una tarea que requiera alta concentración (trabajo, estudio, reuniones) o en la mañana para empezar el día con máxima energía y claridad mental. También es un excelente pre-entreno.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">¿Tiene contraindicaciones?</div>
+                    <div class="faq-answer">
+                        <p>Su uso no es recomendable para personas con hipersensibilidad a la cafeína, embarazadas, mujeres en período de lactancia y menores de 18 años. Si tienes alguna condición médica preexistente (como hipertensión o problemas cardíacos), es fundamental que consultes a tu médico antes de consumirlo.</p>
+                    </div>
+                </div>
+                 <div class="faq-item">
+                    <div class="faq-question">¿El envío es gratis?</div>
+                    <div class="faq-answer">
+                        <p>¡Sí! Todos nuestros planes de 1, 2 y 3 meses incluyen envío GRATIS a todo Chile. Tu pedido llegará a la puerta de tu casa sin costo adicional.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ====================================================== -->
-        <!-- ====== SECCIÓN DE ADVERTENCIAS LEGALES (IMPORTANTE) === -->
-        <!-- ====================================================== -->
         <section class="legal-disclaimer">
             <div class="container">
                 <h3>INFORMACIÓN IMPORTANTE</h3>
@@ -621,11 +735,8 @@ src="https://www.facebook.com/tr?id=841830128182783&ev=PageView&noscript=1"
         </section>
     </main>
 
-    <!-- ====================================================== -->
-    <!-- ============== BOTÓN FIJO INFERIOR ===================== -->
-    <!-- ====================================================== -->
     <div class="fixed-cta">
-        <a href="https://wa.me/56959744777?text=Hola!%20quiero%20comenzar%20a%20desbloquear%20mi%20rendimiento%20con%20E-BOOST" target="_blank" class="cta-button">SÍ, QUIERO PEDIR MI CAJA AHORA</a>
+        <a href="#oferta" class="cta-button">VER PLANES DE RENDIMIENTO</a>
     </div>
 
     <footer>
@@ -633,7 +744,6 @@ src="https://www.facebook.com/tr?id=841830128182783&ev=PageView&noscript=1"
     </footer>
     
     <script>
-        // Script simple y eficiente para el acordeón de FAQ
         document.addEventListener('DOMContentLoaded', function () {
             const faqItems = document.querySelectorAll('.faq-item');
 
