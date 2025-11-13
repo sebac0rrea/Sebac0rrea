@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tu Mejor Versión - Elige Tu Misión</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="images/logo.png"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
@@ -23,10 +23,10 @@
         }
         .product-card:hover {
             transform: translateY(-10px);
-            border-color: #f37021; /* eboost-orange */
         }
-        .product-card.green-hover:hover { border-color: #94c120; }
-        .product-card.purple-hover:hover { border-color: #c43bad; }
+        #eboost-card:hover { border-color: #f37021; }
+        #burn-card:hover { border-color: #94c120; }
+        #renova-card:hover { border-color: #c43bad; }
 
         .cta-button {
             transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -55,54 +55,68 @@ src="https://www.facebook.com/tr?id=841830128182783&ev=PageView&noscript=1"
 </head>
 <body class="bg-gray-900 text-white">
 
+    <!-- TOP HEADER (CON LOGO) -->
+    <header class="bg-black py-5 px-4 sm:px-6">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <!-- Título Principal de la Marca -->
+            <h2 class="text-3xl font-black uppercase tracking-tight">Tu Mejor Versión</h2>
+            <!-- Logo FWP a la derecha -->
+            <div class="flex items-center space-x-2">
+                <span class="text-sm text-gray-400 uppercase font-semibold">By:</span>
+                <!-- Asumiendo que 'logo.png' está en la carpeta 'images' -->
+                <img src="images/logo.png" alt="FWP Logo" class="h-6"> 
+            </div>
+        </div>
+    </header>
+
     <!-- HERO SECTION -->
     <div class="bg-black text-center py-20 px-4">
         <h1 class="text-5xl md:text-7xl font-black uppercase tracking-tight leading-tight">
             TU POTENCIAL ES GIGANTE. DEJA DE JUGAR EN PEQUEÑO.
         </h1>
         <p class="text-xl md:text-2xl text-gray-300 mt-6 max-w-4xl mx-auto">
-            Tu potencial es enorme. El cansancio, la falta de enfoque y un cuerpo que no te acompaña no son tu destino. Son problemas. Y nosotros tenemos las herramientas para que los soluciones.
+            El cansancio, la niebla mental y un cuerpo que no responde son el enemigo. Nuestras Misiones son tu plan de ataque. Elige tu objetivo y empieza la transformación.
         </p>
         <a href="#misiones" class="cta-button inline-block bg-white text-black font-bold text-2xl py-4 px-10 mt-10 rounded-lg shadow-lg">
-            DESCUBRE TU MISIÓN
+            ELEGIR MI MISIÓN
         </a>
     </div>
 
     <!-- "TRIAGE" / MISSIONS SECTION -->
     <div id="misiones" class="py-20 px-4">
         <div class="max-w-6xl mx-auto text-center">
-            <h2 class="text-4xl md:text-5xl font-bold">ELIGE TU MISIÓN. TE DAMOS LA HERRAMIENTA.</h2>
-            <p class="text-lg text-gray-400 mt-4">¿Cuál es tu principal objetivo hoy?</p>
+            <h2 class="text-4xl md:text-5xl font-bold">ELIGE TU CAMPO de BATALLA.</h2>
+            <p class="text-lg text-gray-400 mt-4">¿Qué enemigo vas a derrotar hoy?</p>
             
             <div class="grid md:grid-cols-3 gap-8 mt-12">
                 
                 <!-- MISION 1: E-BOOST -->
-                <div class="product-card bg-gray-800 p-8 rounded-lg flex flex-col">
+                <div id="eboost-card" class="product-card bg-gray-800 p-8 rounded-lg flex flex-col">
                     <img src="images/caja eboost.png" alt="Caja del producto E-BOOST" class="mx-auto h-48 w-auto mb-6">
                     <h3 class="text-3xl font-black eboost-orange-text">MISIÓN: DOMINAR TU DÍA</h3>
-                    <p class="text-gray-300 mt-4 flex-grow">Para el que necesita máxima energía, enfoque láser y una mente a prueba de balas para conquistar cada tarea, reunión y desafío.</p>
-                    <a href="./eboost/" class="cta-button mt-8 inline-block bg-orange-500 text-white font-bold text-xl py-3 px-8 rounded-lg">
-                        DESCUBRIR E-BOOST
+                    <p class="text-gray-300 mt-4 flex-grow">Para el que vive de su mente. Domina cada reunión y decisión con energía limpia y un enfoque de élite para ganar el día.</p>
+                    <a href="./Eboost/" class="cta-button mt-8 inline-block bg-orange-500 text-white font-bold text-xl py-3 px-8 rounded-lg">
+                        INICIAR MISIÓN RENDIMIENTO
                     </a>
                 </div>
 
                 <!-- MISION 2: 24BURN -->
-                <div class="product-card green-hover bg-gray-800 p-8 rounded-lg flex flex-col">
+                <div id="burn-card" class="product-card green-hover bg-gray-800 p-8 rounded-lg flex flex-col">
                     <img src="images/24burn.png" alt="Envase del producto 24BURN" class="mx-auto h-48 w-auto mb-6">
                     <h3 class="text-3xl font-black hormozi-green-text">MISIÓN: ACTIVAR TU FÍSICO</h3>
-                    <p class="text-gray-300 mt-4 flex-grow">Para el que busca un aliado en su transformación física, apoyando su metabolismo y dándole la energía necesaria para entrenar con todo.</p>
-                    <a href="./24burn/" class="cta-button mt-8 inline-block bg-lime-500 text-black font-bold text-xl py-3 px-8 rounded-lg">
-                        DESCUBRIR 24BURN
+                    <p class="text-gray-300 mt-4 flex-grow">Para el que está harto de excusas. Activa el motor quema-grasa de tu cuerpo y dale la energía que necesita para entrenar como una bestia.</p>
+                    <a href="./24Burn/" class="cta-button mt-8 inline-block bg-lime-500 text-black font-bold text-xl py-3 px-8 rounded-lg">
+                        INICIAR MISIÓN ACTIVACIÓN
                     </a>
                 </div>
 
                 <!-- MISION 3: RENÖVA+ -->
-                <div class="product-card purple-hover bg-gray-800 p-8 rounded-lg flex flex-col">
+                <div id="renova-card" class="product-card purple-hover bg-gray-800 p-8 rounded-lg flex flex-col">
                     <img src="images/pote renova.png" alt="Envase del producto RENÖVA+" class="mx-auto h-48 w-auto mb-6">
                     <h3 class="text-3xl font-black renova-purple-text">MISIÓN: RENOVAR TU VITALIDAD</h3>
-                    <p class="text-gray-300 mt-4 flex-grow">Para el que invierte en su bienestar a largo plazo, nutriendo su cuerpo desde adentro para una piel, cabello y articulaciones saludables.</p>
-                    <a href="./renovaplus/" class="cta-button mt-8 inline-block bg-pink-600 text-white font-bold text-xl py-3 px-8 rounded-lg">
-                        DESCUBRIR RENÖVA+
+                    <p class="text-gray-300 mt-4 flex-grow">Para el que juega a largo plazo. Nutrición celular para una piel firme, articulaciones a prueba de balas y la vitalidad que creías perdida.</p>
+                    <a href="./Renovaplus/" class="cta-button mt-8 inline-block bg-pink-600 text-white font-bold text-xl py-3 px-8 rounded-lg">
+                        INICIAR MISIÓN VITALIDAD
                     </a>
                 </div>
 
@@ -113,9 +127,9 @@ src="https://www.facebook.com/tr?id=841830128182783&ev=PageView&noscript=1"
     <!-- WHY US SECTION -->
     <div class="bg-black py-20 px-4">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-4xl font-bold">NO VENDEMOS PRODUCTOS. OFRECEMOS VERSIONES MEJORADAS.</h2>
+            <h2 class="text-4xl font-bold">NO VENDEMOS SUPLEMENTOS. VENDEMOS RESULTADOS.</h2>
             <p class="text-lg text-gray-300 mt-6">
-                En "Tu Mejor Versión", no creemos en soluciones mágicas. Creemos en la ciencia y en darte herramientas de alta calidad para que TÚ construyas el cambio. Cada fórmula está diseñada con ingredientes específicos para misiones claras. Somos tus aliados, no tus salvadores. Tu éxito es tu esfuerzo, potenciado por nuestras herramientas.
+                Olvídate de las soluciones mágicas. En "Tu Mejor Versión", creemos en la ciencia y en el esfuerzo. Nuestras Misiones son herramientas de precisión, formuladas para objetivos claros. Nosotros ponemos la fórmula de élite, tú pones el trabajo. Juntos, construimos una versión de ti que el promedio no puede alcanzar.
             </p>
         </div>
     </div>
