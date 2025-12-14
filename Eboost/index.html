@@ -1,763 +1,348 @@
 <!DOCTYPE html>
 <html lang="es-CL">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Título optimizado para el objetivo del producto -->
-    <title>E-BOOST: Potencia, Enfoque y Energía Para Tu Día</title>
-    
+    <title>E-BOOST: Potencia, Enfoque y Energía | Tu Mejor Versión</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    
-    <style>
-        /* --- ESTILO HORMOZI: Colores alineados con la marca E-BOOST --- */
-        :root {
-            --color-primario: #111111;
-            --color-secundario: #f9f9f9;
-            --color-acento: #F37021; /* Naranja energético para E-BOOST */
-            --color-acento-popular: #28a745; 
-            --color-texto: #333;
-            --color-blanco: #ffffff;
-            --color-fondo-tarjeta: #1e1e1e;
-            --fuente-titulos: 'Oswald', sans-serif;
-            --fuente-cuerpo: 'Roboto', sans-serif;
-        }
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Oswald:wght@400;600;700&display=swap"
+        rel="stylesheet">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
+    <style>
+        :root {
+            --color-accent: #f37021;
+            --color-accent-dark: #d35400;
+            --font-heading: 'Oswald', sans-serif;
+            --font-body: 'Inter', sans-serif;
         }
 
         body {
-            font-family: var(--fuente-cuerpo);
-            color: var(--color-texto);
-            background-color: var(--color-blanco);
-            line-height: 1.7;
-            padding-bottom: 100px;
+            font-family: var(--font-body);
+            background-color: #050505;
+            color: #e5e5e5;
         }
 
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 50px 20px;
+        h1,
+        h2,
+        h3,
+        .brand-font {
+            font-family: var(--font-heading);
         }
-        
+
+        .text-accent {
+            color: var(--color-accent);
+        }
+
+        .bg-accent {
+            background-color: var(--color-accent);
+        }
+
+        .border-accent {
+            border-color: var(--color-accent);
+        }
+
         .cta-button {
-            display: inline-block;
-            background: var(--color-acento);
-            color: var(--color-blanco);
-            padding: 18px 35px;
-            font-size: 1.4rem;
-            font-weight: 700;
-            font-family: var(--fuente-titulos);
-            text-decoration: none;
-            border-radius: 8px;
-            text-align: center;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            box-shadow: 0 5px 20px rgba(0,0,0, 0.3);
-            border: none;
-            cursor: pointer;
-            width: 100%;
-            max-width: 400px;
+            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-dark) 100%);
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(243, 112, 33, 0.2);
         }
 
         .cta-button:hover {
-            transform: translateY(-3px);
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(243, 112, 33, 0.4);
+            filter: brightness(110%);
         }
 
-        .cta-button-popular {
-            background: var(--color-acento-popular);
-        }
-        
-        .cta-subtitle {
-            display: block;
-            font-size: 0.9rem;
-            margin-top: 8px;
-            font-weight: 700;
-            opacity: 0.9;
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
         }
 
-        .hero {
-            background-color: var(--color-secundario);
-            text-align: center;
-            padding: 60px 20px;
-        }
-
-        .product-type-badge {
-            display: inline-block;
-            background-color: #e9ecef;
-            color: var(--color-texto);
-            padding: 5px 15px;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 1rem;
-            margin-bottom: 15px;
-            border: 1px solid #dee2e6;
-        }
-
-        .hero h1 {
-            font-family: var(--fuente-titulos);
-            font-size: 3.2rem;
-            line-height: 1.2;
-            color: var(--color-primario);
-            margin-bottom: 15px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero .sub-headline {
-            font-size: 1.4rem;
-            max-width: 650px;
-            margin: 0 auto 30px auto;
-            color: var(--color-texto);
-        }
-        
-        .hero-image {
-            max-width: 300px;
-            width: 100%;
-            margin-bottom: 30px;
-            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.15));
-        }
-        
-        .problem-section {
-            background-color: var(--color-primario);
-            color: var(--color-blanco);
-        }
-        
-        .problem-section h2 {
-            text-align: center;
-            font-family: var(--fuente-titulos);
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            color: var(--color-blanco);
-        }
-        
-        .problem-list {
-            list-style: none;
-            max-width: 600px;
-            margin: auto;
-            font-size: 1.2rem;
-        }
-        
-        .problem-list li {
-            padding: 12px 0 12px 40px;
+        .check-list li {
             position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1rem;
         }
 
-        .problem-list li::before {
-            content: '🧠';
+        .check-list li::before {
+            content: '✓';
             position: absolute;
             left: 0;
-            top: 12px;
-            font-size: 1.5rem;
-        }
-        
-        .solution-section h2 {
-            text-align: center;
-            font-family: var(--fuente-titulos);
-            font-size: 2.8rem;
-            margin-bottom: 40px;
-        }
-        
-        .ingredient-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .ingredient-card {
-            background: var(--color-secundario);
-            border: 1px solid #eee;
-            border-radius: 10px;
-            padding: 25px;
-            text-align: center;
-        }
-        
-        .ingredient-card .icon {
-            font-size: 3rem;
-            margin-bottom: 15px;
-            color: var(--color-acento);
-        }
-        
-        .ingredient-card h3 {
-            font-family: var(--fuente-titulos);
-            font-size: 1.6rem;
-            margin-bottom: 10px;
-            color: var(--color-primario);
-        }
-
-        .extra-image-container {
-            text-align: center;
-            margin: 50px 0;
-        }
-
-        .extra-image-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        }
-        
-        .trust-badges {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        
-        .trust-badge {
-            background: #fff;
-            padding: 10px 15px;
-            border-radius: 5px;
-            font-weight: 700;
-            font-size: 0.9rem;
-            border: 1px solid #ddd;
-        }
-
-        .offer-section {
-            background-color: var(--color-primario);
-            color: var(--color-blanco);
-        }
-        
-        .offer-section h2 {
-            font-family: var(--fuente-titulos);
-            font-size: 2.8rem;
-            margin-bottom: 15px;
-            text-align: center;
-            color: var(--color-blanco);
-        }
-
-        .offer-section .offer-subtitle {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto 25px auto;
-            text-align: center;
-            color: var(--color-blanco);
-        }
-
-        .what-you-get {
-            list-style: none;
-            margin: 25px auto;
-            max-width: 600px; 
-            text-align: left;
-            font-size: 1.1rem;
-            color: var(--color-blanco);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 40px;
-        }
-        
-        .what-you-get .pack-title {
-            font-family: var(--fuente-titulos);
-            font-size: 1.5rem;
-            text-align: center;
-            margin-bottom: 15px;
-            color: var(--color-acento);
-        }
-
-        .what-you-get ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .what-you-get li {
-            padding: 8px 0;
-        }
-        
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-            align-items: stretch;
-        }
-
-        .pricing-card {
-            background: var(--color-fondo-tarjeta);
-            color: var(--color-blanco);
-            border-radius: 10px;
-            padding: 30px 20px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            border: 2px solid #444;
-            transition: transform 0.3s ease;
-        }
-
-        .pricing-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .pricing-card.popular {
-            border-color: var(--color-acento-popular);
-            position: relative;
-        }
-
-        .pricing-card .badge {
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--color-acento-popular);
-            color: var(--color-blanco);
-            padding: 5px 15px;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            font-weight: 700;
-            font-family: var(--fuente-titulos);
-        }
-
-        .pricing-card h3 {
-            font-family: var(--fuente-titulos);
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-            color: var(--color-blanco);
-        }
-
-        .pricing-card-image {
-            max-width: 100%;
-            height: 260px;
-            object-fit: contain;
-            margin-bottom: 20px;
-        }
-
-        .price-details {
-            margin-bottom: 25px;
-        }
-        
-        .price-details .price-value {
-            font-family: var(--fuente-titulos);
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: var(--color-blanco);
-            line-height: 1;
-        }
-        
-        .price-details .price-saving {
-            font-size: 1rem;
-            color: var(--color-acento-popular);
-            font-weight: 700;
-            margin-top: 5px;
-            height: 1.2em;
-        }
-
-        .price-details .price-per-unit {
-            font-size: 0.9rem;
-            color: #ccc;
-            height: 1.2em;
-        }
-
-        .pricing-card .cta-button {
-            margin-top: auto;
-            width: 100%;
-            max-width: 100%;
-            font-size: 1.2rem;
-            padding: 15px 20px;
-        }
-        
-        .wholesale-cta-container {
-            text-align: center;
-            margin-top: 50px;
-        }
-
-        .wholesale-button {
-            display: inline-block;
-            background: transparent;
-            color: var(--color-blanco);
-            padding: 15px 30px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            font-family: var(--fuente-cuerpo);
-            text-decoration: none;
-            border-radius: 8px;
-            text-align: center;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            border: 2px solid var(--color-acento);
-            cursor: pointer;
-            max-width: 600px;
-            line-height: 1.4;
-        }
-
-        .wholesale-button:hover {
-            background-color: var(--color-acento);
-            color: var(--color-blanco);
-        }
-
-        .testimonials h2 {
-            text-align: center;
-            font-family: var(--fuente-titulos);
-            font-size: 2.8rem;
-            margin-bottom: 40px;
-        }
-        
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 25px;
-            max-width: 700px;
-            margin: auto;
-        }
-        
-        .testimonial-card {
-            background-color: var(--color-secundario);
-            padding: 25px;
-            border-radius: 10px;
-            border-left: 6px solid var(--color-acento);
-        }
-        
-        .testimonial-card p {
-            font-size: 1.1rem;
-            font-style: italic;
-            margin-bottom: 15px;
-            line-height: 1.6;
-        }
-
-        .testimonial-card .author {
-            font-weight: 700;
-            text-align: right;
-            color: var(--color-acento);
-        }
-        
-        .faq h2 {
-            text-align: center;
-            font-family: var(--fuente-titulos);
-            font-size: 2.8rem;
-            margin-bottom: 40px;
-        }
-
-        .faq-item {
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 15px;
-            margin-bottom: 15px;
-        }
-        
-        .faq-question {
-            font-size: 1.3rem;
-            font-weight: 700;
-            cursor: pointer;
-            position: relative;
-            padding-right: 30px;
-        }
-        
-        .faq-question::after {
-            content: '+';
-            position: absolute;
-            right: 5px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 2rem;
-            transition: transform 0.3s;
-            color: var(--color-acento);
-        }
-        
-        .faq-item.active .faq-question::after {
-            transform: translateY(-50%) rotate(45deg);
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease-in-out;
-        }
-        
-        .faq-item.active .faq-answer {
-            max-height: 300px;
-            padding-top: 15px;
-        }
-        
-        .legal-disclaimer {
-            background-color: #f8f9fa;
-            border-top: 2px solid #dee2e6;
-            border-bottom: 2px solid #dee2e6;
-        }
-        .legal-disclaimer .container {
-            padding-top: 30px;
-            padding-bottom: 30px;
-        }
-        .legal-disclaimer h3 {
-            text-align: center;
-            font-family: var(--fuente-titulos);
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: var(--color-primario);
-        }
-        .legal-disclaimer p {
-            font-size: 0.95rem;
-            max-width: 700px;
-            margin: 0 auto 10px auto;
-            text-align: center;
-            line-height: 1.5;
-        }
-
-        footer {
-            background: var(--color-primario);
-            color: var(--color-blanco);
-            text-align: center;
-            padding: 30px 20px;
-        }
-
-        .fixed-cta {
-            display: block;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(5px);
-            padding: 15px;
-            box-shadow: 0 -3px 10px rgba(0,0,0,0.15);
-            z-index: 1000;
-            text-align: center;
-        }
-        
-        .fixed-cta .cta-button {
-            font-size: 1.2rem;
-            padding: 15px 25px;
-        }
-        
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .hero .sub-headline { font-size: 1.2rem; }
-            .problem-section h2, .solution-section h2, .offer-section h2, .testimonials h2, .faq h2 { font-size: 2.2rem; }
-            .container { padding: 40px 15px; }
+            color: var(--color-accent);
+            font-weight: bold;
         }
     </style>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '841830128182783');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display="none"
-src="https://www.facebook.com/tr?id=841830128182783&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '841830128182783');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=841830128182783&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
+
 <body>
 
-    <header class="hero">
-        <div class="container">
-            <span class="product-type-badge">SUPLEMENTO ALIMENTICIO</span>
-            <!-- Asegúrate de tener una imagen para E-BOOST en la ruta 'images/eboost-caja.png' -->
-            <img src="images/CAJA EBOOST.png" alt="Caja de E-BOOST" class="hero-image">
-            <h1>LA FÓRMULA PARA DESBLOQUEAR TU MÁXIMO RENDIMIENTO DIARIO</h1>
-            <p class="sub-headline">Descubre E-BOOST, una combinación de Aminoácidos, Guaraná, Té Negro y Yerba Mate, diseñada para reducir la fatiga y potenciar tu enfoque y concentración.</p>
-            <a href="#oferta" class="cta-button">
-                VER PLANES DE RENDIMIENTO
-                <span class="cta-subtitle">Elige tu Misión de 1, 2 o 3 meses</span>
+    <!-- NAV -->
+    <nav class="absolute top-0 w-full p-6 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="../index.html"
+                class="text-white opacity-80 hover:opacity-100 transition-opacity flex items-center gap-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                <span class="text-sm font-bold tracking-widest uppercase">Volver al Inicio</span>
             </a>
+            <img src="../images/logo.png" alt="FWP Logo" class="h-6 opacity-50">
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative min-h-screen flex items-center pt-24 pb-12 px-4 overflow-hidden">
+        <!-- Background Gradient -->
+        <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-black z-0"></div>
+        <div
+            class="absolute right-0 top-0 w-2/3 h-full bg-[#f37021] opacity-5 blur-[150px] rounded-full pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center relative z-10">
+            <!-- Text Content -->
+            <div class="text-left">
+                <div
+                    class="inline-block py-1 px-3 border border-[#f37021]/50 rounded-full bg-[#f37021]/10 text-[#f37021] text-xs font-bold tracking-widest uppercase mb-6">
+                    Suplemento Alimenticio
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold uppercase leading-none mb-6 text-white">
+                    Desbloquea<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#f37021] to-orange-400">Tu
+                        Máximo<br>Rendimiento</span>
+                </h1>
+                <p class="text-xl text-gray-400 mb-8 max-w-lg leading-relaxed font-light">
+                    Una fórmula de élite con Aminoácidos, Guaraná y Yerba Mate.
+                    <span class="text-gray-200 font-medium">Energía limpia, enfoque láser y cero excusas.</span>
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#oferta"
+                        class="cta-button py-4 px-8 rounded-lg text-white font-bold text-center uppercase tracking-wide text-lg">
+                        COMPRAR AHORA • $39.990
+                    </a>
+                    <p
+                        class="text-xs text-center sm:text-left text-gray-500 mt-2 sm:mt-0 flex items-center justify-center sm:justify-start gap-1">
+                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        Envío Gratis a todo Chile
+                    </p>
+                </div>
+            </div>
+
+            <!-- Image -->
+            <div class="relative flex justify-center">
+                <div class="absolute inset-0 bg-white/5 rounded-full blur-3xl transform scale-75"></div>
+                <img src="images/CAJA EBOOST.png" alt="E-Boost Box"
+                    class="relative z-10 w-full max-w-md drop-shadow-2xl hover:scale-105 transition-transform duration-500">
+            </div>
         </div>
     </header>
 
-    <main>
-        <section class="problem-section">
-            <div class="container">
-                <h2>¿TE DOMINA EL CANSANCIO Y LA FALTA DE ENFOQUE?</h2>
-                <ul class="problem-list">
-                    <li>Sufres de "niebla mental" y te cuesta concentrarte en tareas importantes.</li>
-                    <li>Dependes del café o bebidas energéticas que te dejan con nerviosismo y una posterior caída de energía.</li>
-                    <li>Sientes un agotamiento o "burnout" que te impide rendir al máximo en tu trabajo, estudios o entrenamientos.</li>
-                    <li>La fatiga te gana la batalla mucho antes de que termine el día.</li>
-                    <li>Buscas una fuente de energía limpia y sostenida para tener una ventaja competitiva.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="solution-section">
-            <div class="container">
-                <h2>INGREDIENTES CLAVE PARA TU MISIÓN DE ENERGÍA</h2>
-                <div class="ingredient-grid">
-                    <div class="ingredient-card">
-                        <div class="icon">🌿</div>
-                        <h3>Yerba Mate y Té Negro</h3>
-                        <p>Fuentes naturales de cafeína y antioxidantes que proporcionan energía sostenida y mejoran el estado de alerta.</p>
-                    </div>
-                    <div class="ingredient-card">
-                        <div class="icon">🍇</div>
-                        <h3>Guaraná</h3>
-                        <p>Conocido por su capacidad para reducir la fatiga y mejorar el enfoque gracias a su perfil único de estimulantes naturales.</p>
-                    </div>
-                    <div class="ingredient-card">
-                        <div class="icon">💪</div>
-                        <h3>Aminoácidos (BCAAs)</h3>
-                        <p>Valina, Leucina e Isoleucina. Ayudan a disminuir la percepción de fatiga durante la actividad física y mental.</p>
-                    </div>
-                    <div class="ingredient-card">
-                        <div class="icon">💡</div>
-                        <h3>Mix Vitamínico Completo</h3>
-                        <p>Un blend de vitaminas esenciales que apoyan la producción de energía celular y la función cognitiva.</p>
-                    </div>
+    <!-- INGREDIENTS STRIP -->
+    <div class="border-y border-white/10 bg-white/5 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 py-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-white/10">
+                <div class="px-2">
+                    <span class="block text-2xl mb-1">🌿</span>
+                    <h3 class="text-white font-bold uppercase text-sm tracking-wider">Yerba Mate</h3>
                 </div>
-                <div class="extra-image-container">
-                     <!-- Asegúrate de tener una imagen para E-BOOST en la ruta 'images/eboost-beneficios.png' -->
-                    <img src="images/SACHET EBOOST.png" alt="Beneficios visuales de E-BOOST">
+                <div class="px-2">
+                    <span class="block text-2xl mb-1">🔥</span>
+                    <h3 class="text-white font-bold uppercase text-sm tracking-wider">Guaraná</h3>
                 </div>
-                <div class="trust-badges">
-                    <span class="trust-badge">✓ 28 Porciones</span>
-                    <span class="trust-badge">✓ 0% Azúcar</span>
-                    <span class="trust-badge">✓ 7g por Sachet</span>
-                    <span class="trust-badge">✓ Solo 2 Calorías</span>
+                <div class="px-2">
+                    <span class="block text-2xl mb-1">💪</span>
+                    <h3 class="text-white font-bold uppercase text-sm tracking-wider">Aminoácidos</h3>
+                </div>
+                <div class="px-2">
+                    <span class="block text-2xl mb-1">⚡</span>
+                    <h3 class="text-white font-bold uppercase text-sm tracking-wider">Vitaminas</h3>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
 
-        <section class="offer-section" id="oferta">
-            <div class="container">
-                <h2>INICIA TU MISIÓN DE MÁXIMO RENDIMIENTO</h2>
-                <p class="offer-subtitle">Cada compra es un "Pack de Bienvenida" con todo lo que necesitas para empezar. ¡Elige por cuántos meses quieres asegurar tu Misión y ahorra!</p>
-                
-                <div class="what-you-get">
-                    <div class="pack-title">TODO ESTO INCLUYE TU PACK DE BIENVENIDA E-BOOST:</div>
-                    <ul>
-                        <li>✅ <strong>E-BOOST (Caja con 28 Sachets)</strong> - Valor: $39.990</li>
-                        <li>✅ <strong>Envío a todo Chile</strong> - (<span style="text-decoration: line-through;">$5.490</span> <strong style="color: var(--color-acento);">GRATIS</strong>)</li>
-                        <li>✅ <strong>BONUS #1: Guía PDF "Hackea tu Productividad"</strong> - Valor: $10.000</li>
-                        <li>✅ <strong>BONUS #2: Apoyo Personalizado por WhatsApp</strong> - Valor: Incalculable</li>
-                        <li>✅ <strong>BONUS #3: Acceso a Comunidad de Alto Rendimiento</strong> - Valor: $30.000</li>
-                    </ul>
+    <!-- PROBLEM SECTION -->
+    <section class="py-24 px-4">
+        <div class="max-w-4xl mx-auto text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-bold uppercase text-white mb-6">¿Te domina el cansancio?</h2>
+            <p class="text-gray-400 text-lg">No dejes que la "niebla mental" te cueste oportunidades.</p>
+        </div>
+
+        <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-8 text-gray-300">
+            <div class="glass-card p-8 rounded-xl text-center hover:border-[#f37021] transition-colors">
+                <div class="text-4xl mb-4 opacity-50">🧠</div>
+                <h3 class="text-white text-xl font-bold mb-3">Niebla Mental</h3>
+                <p>Te cuesta concentrarte en tareas importantes y sientes que tu cerebro va lento.</p>
+            </div>
+            <div class="glass-card p-8 rounded-xl text-center hover:border-[#f37021] transition-colors">
+                <div class="text-4xl mb-4 opacity-50">📉</div>
+                <h3 class="text-white text-xl font-bold mb-3">Caídas de Energía</h3>
+                <p>El café te da un "boost" corto, pero luego viene el bajón y la ansiedad.</p>
+            </div>
+            <div class="glass-card p-8 rounded-xl text-center hover:border-[#f37021] transition-colors">
+                <div class="text-4xl mb-4 opacity-50">😫</div>
+                <h3 class="text-white text-xl font-bold mb-3">Fatiga Crónica</h3>
+                <p>Llegas al final del día sin batería para entrenar o disfrutar tu tiempo libre.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- OFFER SECTION -->
+    <section id="oferta" class="py-24 px-4 bg-gradient-to-b from-[#111] to-black">
+        <div
+            class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center bg-[#1a1a1a] rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+
+            <!-- Product Showcase in Offer -->
+            <div class="p-10 md:p-16 flex items-center justify-center bg-white/5 relative">
+                <div class="absolute inset-0 bg-[#f37021] opacity-10 blur-3xl"></div>
+                <img src="images/SACHET EBOOST.png" alt="E-Boost Sachet"
+                    class="relative z-10 w-full max-w-sm drop-shadow-2xl">
+            </div>
+
+            <!-- Offer Details -->
+            <div class="p-10 md:p-16 text-left">
+                <div
+                    class="inline-block py-1 px-3 bg-red-600/20 text-red-500 border border-red-500/30 rounded text-xs font-bold tracking-wider uppercase mb-4">
+                    Oferta Exclusiva Online
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-2">PACK E-BOOST</h2>
+                <p class="text-gray-400 text-lg mb-8">La munición completa para 1 mes de alto rendimiento.</p>
+
+                <div class="space-y-4 mb-8">
+                    <div class="flex items-center gap-3 text-gray-300">
+                        <div
+                            class="w-6 h-6 rounded-full bg-green-500/20 text-green-500 flex items-center justify-center text-xs">
+                            ✓</div>
+                        <span><strong>28 Sachets</strong> (Suministro Mensual)</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-gray-300">
+                        <div
+                            class="w-6 h-6 rounded-full bg-green-500/20 text-green-500 flex items-center justify-center text-xs">
+                            ✓</div>
+                        <span><strong>Envío GRATIS</strong> a todo Chile</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-gray-300">
+                        <div
+                            class="w-6 h-6 rounded-full bg-green-500/20 text-green-500 flex items-center justify-center text-xs">
+                            ✓</div>
+                        <span>Bonus: Acceso a Comunidad de Alto Rendimiento</span>
+                    </div>
                 </div>
 
-                <div class="pricing-grid">
-                    <div class="pricing-card">
-                        <h3>PACK 1 MES</h3>
-                        <img src="images/1caja.png" alt="Plan de 1 Mes de E-BOOST" class="pricing-card-image">
-                        <div class="price-details">
-                            <div class="price-value">$44.990</div>
-                            <div class="price-saving" style="color:var(--color-acento-popular);">¡Ahorras $8.000!</div>
-                            <div class="price-per-unit">&nbsp;</div>
-                        </div>
-                        <a href="https://wa.me/56959744777?text=Hola!%20Quiero%20comprar%20el%20Pack%20de%20Bienvenida%20E-BOOST%20-%201%20Mes%20por%20$44.990." target="_blank" class="cta-button" onclick="fbq('track', 'Contact');">
-                            COMPRAR 1 UNIDAD
-                        </a>
-                    </div>
-
-                    <div class="pricing-card popular">
-                        <div class="badge">MÁS POPULAR</div>
-                        <h3>PACK 2 MESES</h3>
-                        <img src="images/2cajas.png" alt="Plan de 2 Meses de E-BOOST" class="pricing-card-image">
-                        <div class="price-details">
-                             <div class="price-value">$82.480</div>
-                            <div class="price-saving">¡Ahorras $23.500!</div>
-                            <div class="price-per-unit">$41.240 por unidad</div>
-                        </div>
-                        <a href="https://wa.me/56959744777?text=Hola!%20Quiero%20comprar%20el%20Pack%20de%20Bienvenida%20E-BOOST%20-%202%20Meses%20por%20$82.480." target="_blank" class="cta-button cta-button-popular" onclick="fbq('track', 'Contact');">
-                            COMPRAR 2 UNIDADES
-                        </a>
-                    </div>
-
-                    <div class="pricing-card">
-                        <h3>PACK 3 MESES</h3>
-                        <img src="images/3cajas.png" alt="Plan de 3 Meses de E-BOOST" class="pricing-card-image">
-                        <div class="price-details">
-                            <div class="price-value">$119.970</div>
-                            <div class="price-saving">¡Ahorras $39.000!</div>
-                            <div class="price-per-unit">$39.990 por unidad</div>
-                        </div>
-                        <a href="https://wa.me/56959744777?text=Hola!%20Quiero%20comprar%20el%20Pack%20de%20Bienvenida%20E-BOOST%20-%203%20Meses%20por%20$119.970." target="_blank" class="cta-button" onclick="fbq('track', 'Contact');">
-                            COMPRAR 3 UNIDADES
-                        </a>
-                    </div>
+                <div class="flex items-baseline gap-4 mb-8">
+                    <span class="text-5xl font-bold text-white">$39.990</span>
+                    <span class="text-xl text-gray-500 line-through">Normal: $45.990</span>
                 </div>
-                <div class="wholesale-cta-container">
-                    <a href="https://wa.me/56959744777?text=Hola!%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20oportunidad%20de%20comprar%20E-BOOST%20al%20por%20mayor." target="_blank" class="wholesale-button" onclick="fbq('track', 'Contact');">
-                        ¿Eres comerciante o buscas un descuento mayor? Conoce la oportunidad de comprar al por mayor con un 35% a 50% de descuento.
+
+                <a href="https://wa.me/56959744777?text=Hola!%20Quiero%20el%20Pack%20E-BOOST%20por%20$39.990%20con%20Envi%C3%B3%20Gratis."
+                    target="_blank"
+                    class="cta-button w-full py-5 rounded-xl text-white font-bold text-center text-xl uppercase tracking-wider block hover:no-underline"
+                    onclick="fbq('track', 'Contact');">
+                    COMPRAR AHORA
+                </a>
+
+                <p class="text-center text-xs text-gray-500 mt-4">
+                    Pago seguro vía Transferencia o WebPay. Despacho garantizado.
+                </p>
+
+                <!-- Wholesale Link -->
+                <div class="mt-8 pt-6 border-t border-white/10 text-center">
+                    <a href="https://wa.me/56959744777?text=Hola!%20Me%20interesa%20comprar%20E-BOOST%20al%20por%20mayor."
+                        class="text-gray-400 hover:text-[#f37021] text-sm underline transition-colors">
+                        ¿Buscas comprar al por mayor? Haz clic aquí
                     </a>
                 </div>
             </div>
-        </section>
-        
-        <section class="testimonials">
-            <div class="container">
-                <h2>ELLOS YA DESBLOQUEARON SU POTENCIAL</h2>
-                <div class="testimonial-grid">
-                    <div class="testimonial-card">
-                        <p>"E-BOOST cambió mis tardes de estudio. Paso de la niebla mental a una claridad increíble en minutos. Es mi arma secreta para los exámenes. ¡Y el sabor a mandarina es buenísimo!"</p>
-                        <p class="author">- Javier M., Estudiante</p>
-                    </div>
-                    <div class="testimonial-card">
-                        <p>"Soy emprendedor y mis días son una locura. El café me dejaba ansioso. Con E-BOOST tengo la energía para todo el día, pero con un enfoque tranquilo que me permite tomar mejores decisiones. 100% recomendado."</p>
-                        <p class="author">- Sofía L., Emprendedora</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="faq">
-            <div class="container">
-                <h2>TUS DUDAS, RESUELTAS.</h2>
-                <div class="faq-item">
-                    <div class="faq-question">¿Es como una bebida energética tradicional?</div>
-                    <div class="faq-answer">
-                        <p>No. E-BOOST está diseñado para darte energía y enfoque sin el exceso de azúcar y los ingredientes artificiales de las bebidas energéticas comunes. Nuestra fórmula con fuentes naturales de cafeína y aminoácidos busca una energía limpia, sin nerviosismo ni caídas bruscas.</p>
-                    </div>
-                </div>
-                 <div class="faq-item">
-                    <div class="faq-question">¿Cuándo es el mejor momento para tomarlo?</div>
-                    <div class="faq-answer">
-                        <p>Es ideal para tomarlo 30 minutos antes de una tarea que requiera alta concentración (trabajo, estudio, reuniones) o en la mañana para empezar el día con máxima energía y claridad mental. También es un excelente pre-entreno.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">¿Tiene contraindicaciones?</div>
-                    <div class="faq-answer">
-                        <p>Su uso no es recomendable para personas con hipersensibilidad a la cafeína, embarazadas, mujeres en período de lactancia y menores de 18 años. Si tienes alguna condición médica preexistente (como hipertensión o problemas cardíacos), es fundamental que consultes a tu médico antes de consumirlo.</p>
-                    </div>
-                </div>
-                 <div class="faq-item">
-                    <div class="faq-question">¿El envío es gratis?</div>
-                    <div class="faq-answer">
-                        <p>¡Sí! Todos nuestros planes de 1, 2 y 3 meses incluyen envío GRATIS a todo Chile. Tu pedido llegará a la puerta de tu casa sin costo adicional.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- FAQ -->
+    <section class="py-24 px-4 bg-black">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-white mb-12">PREGUNTAS FRECUENTES</h2>
 
-        <section class="legal-disclaimer">
-            <div class="container">
-                <h3>INFORMACIÓN IMPORTANTE</h3>
-                <p><strong>Este producto es un suplemento alimenticio, no es un medicamento y no suple una alimentación balanceada.</strong></p>
-                <p>Su uso no es recomendable para consumo por menores de 18 años, embarazadas y nodrizas, salvo indicación profesional competente y no reemplaza a una alimentación balanceada.</p>
-                <p>Las personas con alguna condición médica preexistente o que tomen medicamentos deben consultar a su médico antes de consumir cualquier suplemento.</p>
-            </div>
-        </section>
-    </main>
+            <div class="space-y-4">
+                <details class="glass-card rounded-lg p-6 group">
+                    <summary
+                        class="flex justify-between items-center cursor-pointer list-none text-lg font-bold text-white">
+                        <span>¿Cómo se toma?</span>
+                        <span class="text-[#f37021] group-open:rotate-90 transition-transform text-2xl">+</span>
+                    </summary>
+                    <div class="mt-4 text-gray-400 leading-relaxed">
+                        Mezcla un sachet en 300-500ml de agua fría. Idealmente tómalo en la mañana o 20 minutos antes de
+                        una actividad que requiera concentración.
+                    </div>
+                </details>
 
-    <div class="fixed-cta">
-        <a href="#oferta" class="cta-button">VER PLANES DE RENDIMIENTO</a>
+                <details class="glass-card rounded-lg p-6 group">
+                    <summary
+                        class="flex justify-between items-center cursor-pointer list-none text-lg font-bold text-white">
+                        <span>¿Cuánto demora el envío?</span>
+                        <span class="text-[#f37021] group-open:rotate-90 transition-transform text-2xl">+</span>
+                    </summary>
+                    <div class="mt-4 text-gray-400 leading-relaxed">
+                        Despachamos gratis a todo Chile. En Santiago toma 24-48 horas hábiles, y en regiones entre 2 a 5
+                        días hábiles dependiendo de la zona.
+                    </div>
+                </details>
+
+                <details class="glass-card rounded-lg p-6 group">
+                    <summary
+                        class="flex justify-between items-center cursor-pointer list-none text-lg font-bold text-white">
+                        <span>¿Tiene contraindicaciones?</span>
+                        <span class="text-[#f37021] group-open:rotate-90 transition-transform text-2xl">+</span>
+                    </summary>
+                    <div class="mt-4 text-gray-400 leading-relaxed">
+                        No recomendado para menores de 15 años, embarazadas o nodrizas. Si tienes hipertensión o
+                        sensibilidad a la cafeína, consulta a tu médico.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-12 px-4 border-t border-white/10 text-center">
+        <p class="text-gray-600 text-sm mb-2">&copy; 2025 FWP Chile. Todos los derechos reservados.</p>
+        <p class="text-gray-700 text-xs max-w-xl mx-auto">Este producto es un suplemento alimenticio, no es un
+            medicamento y no suple una alimentación balanceada.</p>
+    </footer>
+
+    <!-- STICKY CTA MOBILE -->
+    <div class="fixed bottom-0 left-0 w-full p-4 bg-black/90 backdrop-blur border-t border-white/10 md:hidden z-50">
+        <a href="#oferta" class="cta-button w-full py-3 rounded-lg text-white font-bold text-center uppercase block">
+            QUIERO MI E-BOOST
+        </a>
     </div>
 
-    <footer>
-        <p>&copy; 2024 FWP Chile | Todos los derechos reservados.<br>Los suplementos alimenticios son una herramienta para complementar tu estilo de vida.</p>
-    </footer>
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const faqItems = document.querySelectorAll('.faq-item');
-
-            faqItems.forEach(item => {
-                const question = item.querySelector('.faq-question');
-                question.addEventListener('click', () => {
-                    const currentlyActive = document.querySelector('.faq-item.active');
-                    if (currentlyActive && currentlyActive !== item) {
-                        currentlyActive.classList.remove('active');
-                    }
-                    item.classList.toggle('active');
-                });
-            });
-        });
-    </script>
 </body>
+
 </html>
