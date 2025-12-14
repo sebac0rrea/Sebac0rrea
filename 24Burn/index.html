@@ -70,7 +70,7 @@
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
                 n.callMethod ?
-                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
             };
             if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
             n.queue = []; t = b.createElement(e); t.async = !0;
@@ -155,23 +155,32 @@
 
     <!-- INGREDIENTS STRIP -->
     <div class="border-y border-white/10 bg-white/5 backdrop-blur-sm">
-        <div class="max-w-7xl mx-auto px-4 py-8">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-white/10">
-                <div class="px-2">
-                    <span class="block text-2xl mb-1">🍃</span>
-                    <h3 class="text-white font-bold uppercase text-sm tracking-wider">Té Verde</h3>
+        <div class="max-w-7xl mx-auto px-4 py-12">
+            <div
+                class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-white/10">
+                <div class="px-4 py-4 md:py-0">
+                    <span class="block text-3xl mb-3">🍃</span>
+                    <h3 class="text-white font-bold uppercase text-sm tracking-wider mb-2">Té Verde</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">Acelera el metabolismo y favorece la oxidación de
+                        grasas naturalmente.</p>
                 </div>
-                <div class="px-2">
-                    <span class="block text-2xl mb-1">🎯</span>
-                    <h3 class="text-white font-bold uppercase text-sm tracking-wider">L-Carnitina</h3>
+                <div class="px-4 py-4 md:py-0">
+                    <span class="block text-3xl mb-3">🎯</span>
+                    <h3 class="text-white font-bold uppercase text-sm tracking-wider mb-2">L-Carnitina</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">Ayuda a transportar los ácidos grasos para usarlos
+                        como energía.</p>
                 </div>
-                <div class="px-2">
-                    <span class="block text-2xl mb-1">⚡</span>
-                    <h3 class="text-white font-bold uppercase text-sm tracking-wider">Panax Ginseng</h3>
+                <div class="px-4 py-4 md:py-0">
+                    <span class="block text-3xl mb-3">⚡</span>
+                    <h3 class="text-white font-bold uppercase text-sm tracking-wider mb-2">Panax Ginseng</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">Aumenta la resistencia física y combate el
+                        agotamiento diario.</p>
                 </div>
-                <div class="px-2">
-                    <span class="block text-2xl mb-1">🍇</span>
-                    <h3 class="text-white font-bold uppercase text-sm tracking-wider">Guaraná</h3>
+                <div class="px-4 py-4 md:py-0">
+                    <span class="block text-3xl mb-3">🍇</span>
+                    <h3 class="text-white font-bold uppercase text-sm tracking-wider mb-2">Guaraná</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">Potente energizante que mejora el rendimiento
+                        deportivo.</p>
                 </div>
             </div>
         </div>
@@ -258,7 +267,7 @@
                 </a>
 
                 <p class="text-center text-xs text-gray-500 mt-4">
-                    Pago seguro. Despacho express a regiones.
+                    Pago 100% seguro vía Transferencia Bancaria. Despacho garantizado y rápido.
                 </p>
 
                 <div class="mt-8 pt-6 border-t border-white/10 text-center">
