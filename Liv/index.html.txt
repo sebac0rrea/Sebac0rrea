@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIV: Ligereza Que Fluye - Salud Digestiva y Detox</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- ESTILO LIV: Turquesa/Verde Agua --- */
+        :root {
+            --color-primario: #111111;
+            --color-secundario: #f4fcfc; /* Fondo muy suave turquesa */
+            --color-acento: #4ABFB9; /* Turquesa LIV basado en el PDF */
+            --color-acento-hover: #3AA6A0;
+            --color-acento-popular: #F37021; /* Naranja para contraste en oferta */
+            --color-texto: #333;
+            --color-blanco: #ffffff;
+            --color-fondo-tarjeta: #1e1e1e;
+            --fuente-titulos: 'Oswald', sans-serif;
+            --fuente-cuerpo: 'Roboto', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--fuente-cuerpo);
+            color: var(--color-texto);
+            background-color: var(--color-blanco);
+            line-height: 1.7;
+            padding-bottom: 100px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: var(--color-acento);
+            color: var(--color-blanco);
+            padding: 18px 35px;
+            font-size: 1.4rem;
+            font-weight: 700;
+            font-family: var(--fuente-titulos);
+            text-decoration: none;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0, 0.3);
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            background: var(--color-acento-hover);
+        }
+
+        .cta-button-popular {
+            background: var(--color-acento-popular);
+        }
+        
+        .cta-subtitle {
+            display: block;
+            font-size: 0.9rem;
+            margin-top: 8px;
+            font-weight: 700;
+            opacity: 0.9;
+        }
+
+        .hero {
+            background: radial-gradient(circle at center, #e0f7fa 0%, #ffffff 100%);
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .product-type-badge {
+            display: inline-block;
+            background-color: var(--color-acento);
+            color: var(--color-blanco);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-family: var(--fuente-titulos);
+            font-size: 3.2rem;
+            line-height: 1.1;
+            color: var(--color-primario);
+            margin-bottom: 15px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            text-transform: uppercase;
+        }
+
+        .hero .sub-headline {
+            font-size: 1.4rem;
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+            color: #555;
+        }
+        
+        .hero-image {
+            max-width: 320px;
+            width: 100%;
+            margin-bottom: 30px;
+            filter: drop-shadow(0 15px 25px rgba(74, 191, 185, 0.3));
+        }
+        
+        .problem-section {
+            background-color: var(--color-primario);
+            color: var(--color-blanco);
+        }
+        
+        .problem-section h2 {
+            text-align: center;
+            font-family: var(--fuente-titulos);
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: var(--color-blanco);
+            text-transform: uppercase;
+        }
+        
+        .problem-list {
+            list-style: none;
+            max-width: 650px;
+            margin: auto;
+            font-size: 1.25rem;
+        }
+        
+        .problem-list li {
+            padding: 15px 0 15px 45px;
+            position: relative;
+            border-bottom: 1px solid #333;
+        }
+        
+        .problem-list li:last-child {
+            border-bottom: none;
+        }
+
+        .problem-list li::before {
+            content: '🎈'; /* Globo para hinchazón/pesadez */
+            position: absolute;
+            left: 0;
+            top: 15px;
+            font-size: 1.6rem;
+        }
+        
+        .solution-section h2 {
+            text-align: center;
+            font-family: var(--fuente-titulos);
+            font-size: 2.8rem;
+            margin-bottom: 40px;
+            color: var(--color-primario);
+        }
+        
+        .ingredient-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .ingredient-card {
+            background: var(--color-secundario);
+            border: 1px solid #d1f2f0;
+            border-radius: 12px;
+            padding: 30px 25px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .ingredient-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(74, 191, 185, 0.15);
+        }
+        
+        .ingredient-card .icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: var(--color-acento);
+        }
+        
+        .ingredient-card h3 {
+            font-family: var(--fuente-titulos);
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--color-primario);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        
+        .benefit-icon {
+            font-size: 2rem;
+            color: var(--color-acento);
+        }
+
+        .offer-section {
+            background-color: var(--color-primario);
+            color: var(--color-blanco);
+        }
+        
+        .offer-section h2 {
+            font-family: var(--fuente-titulos);
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            text-align: center;
+            color: var(--color-blanco);
+        }
+
+        .offer-section .offer-subtitle {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 35px auto;
+            text-align: center;
+            color: #ccc;
+        }
+        
+        /* Contenedor centralizado para oferta única */
+        .single-offer-container {
+            max-width: 500px;
+            margin: 40px auto 0 auto;
+        }
+
+        .pricing-card {
+            background: var(--color-fondo-tarjeta);
+            color: var(--color-blanco);
+            border-radius: 12px;
+            padding: 35px 25px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            border: 2px solid var(--color-acento);
+            transition: transform 0.3s ease;
+            box-shadow: 0 10px 30px rgba(74, 191, 185, 0.15);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .pricing-card h3 {
+            font-family: var(--fuente-titulos);
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            color: var(--color-blanco);
+        }
+        
+        .pricing-card-image {
+            height: 250px;
+            object-fit: contain;
+            margin-bottom: 20px;
+            margin-top: 10px;
+        }
+
+        /* Estilo para la lista de beneficios dentro del pack */
+        .pack-benefits {
+            text-align: left;
+            margin: 15px 0 25px 0;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            list-style: none;
+        }
+
+        .pack-benefits li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .pack-benefits li:last-child {
+            margin-bottom: 0;
+        }
+
+        .price-details {
+            margin-bottom: 25px;
+        }
+        
+        .price-details .price-value {
+            font-family: var(--fuente-titulos);
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--color-blanco);
+            line-height: 1;
+        }
+        
+        .price-details .price-saving {
+            font-size: 1.2rem;
+            color: var(--color-acento);
+            font-weight: 700;
+            margin-top: 10px;
+        }
+
+        .price-details .price-per-unit {
+            font-size: 1rem;
+            color: #999;
+            margin-top: 5px;
+        }
+
+        .pricing-card .cta-button {
+            margin-top: auto;
+            width: 100%;
+            font-size: 1.4rem;
+            padding: 20px;
+        }
+        
+        .wholesale-cta-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .wholesale-button {
+            display: inline-block;
+            background: transparent;
+            color: #aaa;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-family: var(--fuente-cuerpo);
+            text-decoration: underline;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .wholesale-button:hover {
+            color: var(--color-blanco);
+        }
+
+        .testimonials h2 {
+            text-align: center;
+            font-family: var(--fuente-titulos);
+            font-size: 2.8rem;
+            margin-bottom: 40px;
+            color: var(--color-primario);
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+            max-width: 700px;
+            margin: auto;
+        }
+        
+        .testimonial-card {
+            background-color: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 5px solid var(--color-acento);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .testimonial-card p {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 15px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .testimonial-card .author {
+            font-weight: 700;
+            text-align: right;
+            color: var(--color-acento);
+        }
+        
+        .faq h2 {
+            text-align: center;
+            font-family: var(--fuente-titulos);
+            font-size: 2.8rem;
+            margin-bottom: 40px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .faq-question {
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            position: relative;
+            padding-right: 30px;
+        }
+        
+        .faq-question::after {
+            content: '+';
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.8rem;
+            color: var(--color-acento);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+            color: #666;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding-top: 10px;
+        }
+        
+        .legal-disclaimer {
+            background-color: #eef2f3;
+            padding: 40px 20px;
+            font-size: 0.95rem;
+            color: #555;
+            text-align: center;
+            border-top: 1px solid #ddd;
+        }
+        
+        .legal-disclaimer h3 {
+            font-family: var(--fuente-titulos);
+            color: var(--color-primario);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .legal-disclaimer p {
+            max-width: 800px;
+            margin: 0 auto 10px auto;
+        }
+
+        .fixed-cta {
+            display: block;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(5px);
+            padding: 15px;
+            box-shadow: 0 -3px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            text-align: center;
+        }
+        
+        .fixed-cta .cta-button {
+            font-size: 1.1rem;
+            padding: 12px 25px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .benefits-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '841830128182783');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=841830128182783&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <span class="product-type-badge">NUEVO LANZAMIENTO</span>
+            <br>
+            <!-- Asegúrate de subir la imagen 'liv-pote.png' a la carpeta images -->
+            <img src="images/liv.png" alt="LIV Ligereza Que Fluye" class="hero-image">
+            <h1>LIV: LIGEREZA QUE FLUYE DESDE TU INTERIOR</h1>
+            <p class="sub-headline">La nueva fórmula detox con Probióticos, Fibra y Manzana Verde para recuperar tu salud digestiva, desinflamar tu cuerpo y sentirte liviano otra vez.</p>
+            <a href="#oferta" class="cta-button">
+                QUIERO SENTIRME LIVIANO
+                <span class="cta-subtitle">Comprar Ahora</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="problem-section">
+            <div class="container">
+                <h2>¿TE SIENTES PESADO, HINCHADO Y SIN ENERGÍA?</h2>
+                <ul class="problem-list">
+                    <li>Sufres de hinchazón abdominal frecuente, sintiéndote como un "globo" después de comer.</li>
+                    <li>Tu digestión es lenta, pesada o irregular, afectando tu comodidad diaria.</li>
+                    <li>Sientes ansiedad por comer a deshoras porque nunca te sientes realmente satisfecho.</li>
+                    <li>Notas que tu cuerpo retiene toxinas y te falta esa sensación de "limpieza" interna.</li>
+                    <li>Buscas una solución natural para cuidar tu flora intestinal sin laxantes agresivos.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="solution-section">
+            <div class="container">
+                <h2>LA CIENCIA DE LA LIGEREZA EN CADA SCOOP</h2>
+                <p style="text-align: center; max-width: 700px; margin: 0 auto 40px auto; color: #666; font-size: 1.1rem;">
+                    LIV combina fibra prebiótica, probióticos vivos y superalimentos para una sinergia perfecta que limpia, nutre y equilibra tu sistema.
+                </p>
+
+                <div class="ingredient-grid">
+                    <div class="ingredient-card">
+                        <div class="icon">🦠</div>
+                        <h3>Probióticos Vivos</h3>
+                        <p>3 cepas potentes (Lactobacillus, Bifidobacterium, Streptococcus) para repoblar y fortalecer tu flora intestinal.</p>
+                    </div>
+                    <div class="ingredient-card">
+                        <div class="icon">🍏</div>
+                        <h3>Fibras Naturales</h3>
+                        <p>Manzana Verde, Bamboo y Linaza. Mejoran el tránsito, limpian suavemente y prolongan la saciedad.</p>
+                    </div>
+                    <div class="ingredient-card">
+                        <div class="icon">🌸</div>
+                        <h3>Superfrutas Detox</h3>
+                        <p>Pitahaya, Papaya y Ciruela. Ingredientes conocidos por su capacidad para facilitar la digestión y reducir la inflamación.</p>
+                    </div>
+                    <div class="ingredient-card">
+                        <div class="icon">✨</div>
+                        <h3>Prebióticos (FOS)</h3>
+                        <p>El alimento que tus bacterias buenas necesitan para prosperar y mantener tu intestino saludable.</p>
+                    </div>
+                </div>
+
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <span class="benefit-icon">⚖️</span>
+                        <div><strong>Control de Peso Integral:</strong> Al mejorar la digestión y la saciedad, apoyas tu meta de peso saludable.</div>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">🍃</span>
+                        <div><strong>Detox Natural:</strong> Promueve la eliminación de desechos acumulados sin químicos agresivos.</div>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">🛡️</span>
+                        <div><strong>Defensas Fuertes:</strong> Un intestino sano es clave para un sistema inmunológico fuerte.</div>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">🧘</span>
+                        <div><strong>Bienestar Total:</strong> Menos pesadez física se traduce en más ligereza mental y energía.</div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 40px;">
+                    <div class="trust-badge" style="display: inline-block; padding: 10px 20px; background: #eee; border-radius: 50px; font-weight: bold; color: #555;">
+                        🍏 Sabor Manzana Verde | 🚫 0g Azúcar | 🌱 6g Fibra por Porción
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="offer-section" id="oferta">
+            <div class="container">
+                <h2>COMIENZA TU PLAN DETOX HOY MISMO</h2>
+                <p class="offer-subtitle">Tu bienestar digestivo no puede esperar. Obtén tu plan completo de 1 mes y siente la diferencia desde los primeros días. Envío GRATIS a todo Chile.</p>
+
+                <div class="single-offer-container">
+                    <!-- OFERTA ÚNICA: INDIVIDUAL -->
+                    <div class="pricing-card">
+                        <h3>LIV - PLAN 1 MES</h3>
+                        <img src="images/3pote.png" alt="1 Pote LIV" class="pricing-card-image">
+                        
+                        <!-- LISTA DE BONUS AGREGADA AQUÍ -->
+                        <ul class="pack-benefits">
+                            <li>✅ <strong>LIV (280g)</strong> - Suministro Mensual</li>
+                            <li>✅ <strong>Envío GRATIS</strong> a todo Chile (3-5 Días Hábiles)</li>
+                            <li>✅ <strong>BONUS #1:</strong> Guía Digital de Regalo</li>
+                            <li>✅ <strong>BONUS #2:</strong> Acceso a Comunidad Exclusiva</li>
+                        </ul>
+
+                        <div class="price-details">
+                            <div class="price-value">$49.990</div>
+                            <div class="price-saving">PRECIO LANZAMIENTO</div>
+                        </div>
+                        <a href="https://wa.me/56959744777?text=Hola!%20Quiero%20comprar%201%20unidad%20de%20LIV%20por%20$49.990%20con%20envío%20gratis%20y%20bonus." target="_blank" class="cta-button">
+                            COMPRAR AHORA
+                        </a>
+                    </div>
+                </div>
+
+                <div class="wholesale-cta-container">
+                    <a href="https://wa.me/56959744777?text=Hola!%20Tengo%20un%20negocio%20y%20quiero%20vender%20LIV.%20¿Me%20das%20info%20mayorista?" target="_blank" class="wholesale-button">
+                        ¿Tienes tienda o quieres vender? Pregunta por precios Mayoristas aquí.
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <h2>PRIMEROS RESULTADOS</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <p>"Siempre vivía hinchada, daba igual lo que comiera. Llevo 2 semanas con LIV y la sensación de ligereza es real. Mi ropa me queda más cómoda y voy al baño como reloj. ¡Me encanta!"</p>
+                        <p class="author">- Camila R.</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"Lo tomo en ayunas y me siento genial. El sabor a manzana verde es muy rico, nada químico. Me ha ayudado mucho a controlar la ansiedad de picotear en la tarde."</p>
+                        <p class="author">- Andrés P.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <div class="container">
+                <h2>PREGUNTAS FRECUENTES</h2>
+                <div class="faq-item">
+                    <div class="faq-question">¿Cómo se toma LIV?</div>
+                    <div class="faq-answer">
+                        <p>Muy fácil. Mezcla 1 scoop (10g) en un vaso de agua fría (200ml), revuelve bien y disfruta. Recomendamos tomarlo en ayunas para potenciar su efecto detox, o 30 minutos antes del almuerzo para mejorar la saciedad.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">¿Es un laxante?</div>
+                    <div class="faq-answer">
+                        <p>No. LIV no es un laxante irritante que te hará correr al baño. Su mezcla de fibras y probióticos busca regular tu tránsito de manera natural y saludable, reparando tu flora intestinal a largo plazo.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">¿Tiene azúcar o calorías?</div>
+                    <div class="faq-answer">
+                        <p>LIV tiene 0g de azúcar añadida (endulzado con Estevia) y es muy bajo en calorías (solo 36 kcal por porción), por lo que es perfecto para planes de control de peso y apto para diabéticos.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">¿Puedo tomarlo si estoy embarazada?</div>
+                    <div class="faq-answer">
+                        <p>Por precaución general, y como se indica en nuestras contraindicaciones, recomendamos que mujeres embarazadas o en periodo de lactancia consulten a su médico antes de consumir este suplemento.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="legal-disclaimer">
+            <div class="container">
+                <h3>CONTRAINDICACIONES Y PRECAUCIONES</h3>
+                <p><strong>Alérgenos:</strong> Este producto contiene <strong>derivados lácteos</strong> (cultivos probióticos). No consumir si eres alérgico a la leche.</p>
+                <p><strong>Uso Recomendado:</strong> Producto formulado para adultos mayores de 18 años.</p>
+                <p><strong>Precaución Médica:</strong> Mujeres embarazadas, en periodo de lactancia, y personas con condiciones médicas preexistentes o que estén bajo tratamiento farmacológico, deben consultar con su médico tratante antes de incorporar este producto a su dieta.</p>
+                <p style="margin-top: 20px; font-size: 0.8rem;">&copy; 2025 FWP Chile. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </main>
+
+    <div class="fixed-cta">
+        <a href="#oferta" class="cta-button">QUIERO MI PLAN DETOX</a>
+    </div>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentNode;
+                parent.classList.toggle('active');
+            })
+        })
+    </script>
+</body>
+</html>
