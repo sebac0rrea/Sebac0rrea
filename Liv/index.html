@@ -82,12 +82,12 @@
         fbq('init', '841830128182783');
         fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
+    <noscript><img height="1" width="1" alt="" style="display:none"
             src="https://www.facebook.com/tr?id=841830128182783&ev=PageView&noscript=1" /></noscript>
     <!-- End Meta Pixel Code -->
 </head>
 
-<body>
+<body class="pb-24 md:pb-0">
 
     <!-- NAV -->
     <nav class="absolute top-0 w-full p-6 z-50">
@@ -130,6 +130,7 @@
                 <div class="flex flex-col sm:flex-row gap-4">
                     <a href="https://wa.me/56959744777?text=Hola%20Seba%2C%20quiero%20informaci%C3%B3n%20sobre%20LIV.%20Busco%20apoyar%20mi%20digesti%C3%B3n%20y%20sentirme%20m%C3%A1s%20liviano%2Fa.%20%C2%BFMe%20puedes%20orientar%3F"
                         target="_blank" rel="noopener noreferrer"
+                        onclick="fbq('track', 'Contact'); fbq('trackCustom', 'click_whatsapp_liv');"
                         class="cta-button py-4 px-8 rounded-lg text-black font-bold text-center uppercase tracking-wide text-lg">
                         QUIERO ASESORÍA SOBRE LIV
                     </a>
@@ -149,7 +150,8 @@
             <div class="relative flex justify-center">
                 <div class="absolute inset-0 bg-white/5 rounded-full blur-3xl transform scale-75"></div>
                 <!-- Path adjusted to Image folder structure inside Liv -->
-                <img src="Images/LIV.png" alt="LIV sabor manzana verde de FWP Chile con fibra y probióticos"
+                <img src="Images/liv.webp" alt="LIV sabor manzana verde de FWP Chile con fibra y probióticos"
+                    width="1600" height="1600"
                     class="relative z-10 w-full max-w-md drop-shadow-2xl hover:scale-105 transition-transform duration-500">
             </div>
         </div>
@@ -223,7 +225,9 @@
             <!-- Product Showcase -->
             <div class="p-10 md:p-16 flex items-center justify-center bg-white/5 relative">
                 <div class="absolute inset-0 bg-[#4ABFB9] opacity-10 blur-3xl"></div>
-                <img src="Images/3pote.png" alt="LIV Plan" class="relative z-10 w-full max-w-sm drop-shadow-2xl">
+                <img src="Images/liv-presentacion.webp" alt="Presentación de LIV sabor manzana verde de FWP Chile"
+                    width="1600" height="1458" loading="lazy" decoding="async"
+                    class="relative z-10 w-full max-w-sm drop-shadow-2xl">
             </div>
 
             <!-- Offer Details -->
@@ -263,9 +267,9 @@
                 </div>
 
                 <a href="https://wa.me/56959744777?text=Hola%20Seba%2C%20quiero%20informaci%C3%B3n%20sobre%20LIV.%20Busco%20apoyar%20mi%20digesti%C3%B3n%20y%20sentirme%20m%C3%A1s%20liviano%2Fa.%20%C2%BFMe%20puedes%20orientar%3F"
-                    target="_blank"
+                    target="_blank" rel="noopener noreferrer"
                     class="cta-button w-full py-5 rounded-xl text-black font-bold text-center text-xl uppercase tracking-wider block hover:no-underline"
-                    onclick="fbq('track', 'Contact');">
+                    onclick="fbq('track', 'Contact'); fbq('trackCustom', 'click_whatsapp_liv');">
                     PEDIR ASESORÍA POR WHATSAPP
                 </a>
 
@@ -275,6 +279,8 @@
 
                 <div class="mt-8 pt-6 border-t border-white/10 text-center">
                     <a href="https://wa.me/56959744777?text=Hola%20Seba%2C%20quiero%20que%20me%20ayudes%20a%20elegir%20el%20producto%20FWP%20m%C3%A1s%20adecuado%20para%20mi%20objetivo."
+                        target="_blank" rel="noopener noreferrer"
+                        onclick="fbq('track', 'Contact'); fbq('trackCustom', 'click_whatsapp_asesoria');"
                         class="text-gray-400 hover:text-[#4ABFB9] text-sm underline transition-colors">
                         ¿No sabes si es para ti? Pide orientación antes de comprar
                     </a>
@@ -342,7 +348,7 @@
 
     <!-- FOOTER -->
     <footer class="py-12 px-4 border-t border-white/10 text-center">
-        <p class="text-gray-600 text-sm mb-2">&copy; 2025 FWP Chile. Todos los derechos reservados.</p>
+        <p class="text-gray-600 text-sm mb-2">&copy; 2026 FWP Chile. Todos los derechos reservados.</p>
         <p class="text-gray-700 text-xs max-w-xl mx-auto">Suplemento alimenticio. No es medicamento. No reemplaza una
             alimentación balanceada. Consulta a un profesional de la salud si estás embarazada, en lactancia, tienes una
             condición médica, consumes medicamentos o tienes dudas sobre su consumo. Recomendado para adultos mayores de
@@ -353,6 +359,7 @@
     <div class="fixed bottom-0 left-0 w-full p-4 bg-black/90 backdrop-blur border-t border-white/10 md:hidden z-50">
         <a href="https://wa.me/56959744777?text=Hola%20Seba%2C%20quiero%20informaci%C3%B3n%20sobre%20LIV.%20Busco%20apoyar%20mi%20digesti%C3%B3n%20y%20sentirme%20m%C3%A1s%20liviano%2Fa.%20%C2%BFMe%20puedes%20orientar%3F"
             target="_blank" rel="noopener noreferrer"
+            onclick="fbq('track', 'Contact'); fbq('trackCustom', 'click_whatsapp_liv');"
             class="cta-button w-full py-3 rounded-lg text-black font-bold text-center uppercase block">
             WHATSAPP LIV
         </a>
