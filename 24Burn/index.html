@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>24BURN en Chile | Activación, Energía y Rutina Fitness</title>
     <meta name="description"
-        content="24BURN de FWP, suplemento en polvo sabor té limón con L-Carnitina, guaraná, té verde y Panax Ginseng. Compra con asesoría por WhatsApp en Chile.">
+        content="24BURN de FWP, suplemento en polvo sabor té limón con L-Carnitina, guaraná, té verde y Panax Ginseng. Haz tu pedido por WhatsApp en Chile.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,8 +24,16 @@
 
         body {
             font-family: var(--font-body);
-            background-color: #050505;
+            background-color: #0b1007;
+            background-image:
+                radial-gradient(circle at 88% 12%, rgba(148, 193, 32, 0.14), transparent 32%),
+                radial-gradient(circle at 8% 68%, rgba(148, 193, 32, 0.07), transparent 36%),
+                linear-gradient(180deg, #101608 0%, #070a05 100%);
             color: #e5e5e5;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         h1,
@@ -107,7 +115,7 @@
 
     <!-- HERO SECTION -->
     <header class="relative min-h-screen flex items-center pt-24 pb-12 px-4 overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-black z-0"></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-[#1b260f] via-[#0e1408] to-[#070805] z-0"></div>
         <div
             class="absolute right-0 top-0 w-2/3 h-full bg-[#94c120] opacity-5 blur-[150px] rounded-full pointer-events-none">
         </div>
@@ -130,30 +138,25 @@
                         entrenamiento y activación diaria.</span>
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="https://wa.me/56959744777?text=Hola%20Seba%2C%20quiero%20informaci%C3%B3n%20sobre%2024BURN.%20Busco%20apoyar%20mi%20rutina%20de%20entrenamiento%20y%20activaci%C3%B3n%20diaria.%20%C2%BFMe%20puedes%20orientar%3F"
-                        target="_blank" rel="noopener noreferrer"
-                        onclick="fbq('track', 'Contact'); fbq('trackCustom', 'click_whatsapp_24burn');"
+                    <a href="#oferta"
                         class="cta-button py-4 px-8 rounded-lg text-black font-bold text-center uppercase tracking-wide text-lg">
-                        QUIERO ASESORÍA SOBRE 24BURN
+                        QUIERO MI 24BURN
                     </a>
-                    <p
-                        class="text-xs text-center sm:text-left text-gray-500 mt-2 sm:mt-0 flex items-center justify-center sm:justify-start gap-1">
-                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        Atención directa por WhatsApp
-                    </p>
                 </div>
             </div>
 
             <!-- Image -->
             <div class="relative flex justify-center">
-                <div class="absolute inset-0 bg-white/5 rounded-full blur-3xl transform scale-75"></div>
-                <img src="images/24burn.webp" alt="Pote 24BURN sabor té limón de FWP Chile" width="1000"
-                    height="1000"
-                    class="relative z-10 w-full max-w-md drop-shadow-2xl hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-[#94c120]/10 rounded-full blur-3xl transform scale-75"></div>
+                <div
+                    class="relative z-10 w-full max-w-md overflow-hidden rounded-3xl border border-[#94c120]/25 bg-gradient-to-br from-[#252b1b] via-[#15190f] to-[#080a07] p-2 sm:p-3 shadow-2xl">
+                    <div class="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-[#94c120]/15 blur-3xl"></div>
+                    <div class="relative overflow-hidden rounded-2xl bg-white/[0.04] ring-1 ring-[#94c120]/10">
+                        <img src="images/24burn.webp" alt="Pote 24BURN sabor té limón de FWP Chile" width="1000"
+                            height="1000"
+                            class="w-full object-contain hover:scale-105 transition-transform duration-500">
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -195,8 +198,8 @@
     <section class="py-24 px-4">
         <div class="max-w-4xl mx-auto text-center mb-16">
             <h2 class="text-3xl md:text-5xl font-bold uppercase text-white mb-6">¿Te sientes estancado?</h2>
-            <p class="text-gray-400 text-lg">Complementa tus hábitos con una rutina más activa y asesoría antes de
-                comprar.</p>
+            <p class="text-gray-400 text-lg">Complementa tus hábitos con una rutina más activa y conoce los detalles
+                antes de hacer tu pedido.</p>
         </div>
 
         <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-8 text-gray-300">
@@ -219,40 +222,47 @@
     </section>
 
     <!-- OFFER SECTION -->
-    <section id="oferta" class="py-24 px-4 bg-gradient-to-b from-[#111] to-black">
+    <section id="oferta" class="py-24 px-4 bg-gradient-to-b from-[#18220f] to-[#080b05]">
         <div
-            class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center bg-[#1a1a1a] rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+            class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center bg-[#171d12] rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
 
             <!-- Product Showcase -->
-            <div class="p-10 md:p-16 flex items-center justify-center bg-white/5 relative">
+            <div
+                class="p-8 md:p-14 flex items-center justify-center bg-gradient-to-br from-[#202619] via-[#12160e] to-black relative">
                 <div class="absolute inset-0 bg-[#94c120] opacity-10 blur-3xl"></div>
                 <!-- Usamos 1pote.png para mostrar el producto individual claro -->
-                <img src="images/24burn-pote.webp" alt="Pote individual 24BURN de FWP Chile" width="1024" height="1024"
-                    loading="lazy" decoding="async" class="relative z-10 w-full max-w-sm drop-shadow-2xl">
+                <div
+                    class="relative z-10 w-full max-w-sm overflow-hidden rounded-3xl border border-[#94c120]/25 bg-[#12160e] p-2 sm:p-3 shadow-2xl">
+                    <div class="absolute -right-12 -top-12 h-40 w-40 rounded-full bg-[#94c120]/15 blur-3xl"></div>
+                    <div class="relative overflow-hidden rounded-2xl bg-white/[0.04] ring-1 ring-[#94c120]/10">
+                        <img src="images/24burn-pote.webp" alt="Pote individual 24BURN de FWP Chile" width="1024"
+                            height="1024" loading="lazy" decoding="async" class="w-full object-contain">
+                    </div>
+                </div>
             </div>
 
             <!-- Offer Details -->
             <div class="p-10 md:p-16 text-left">
                 <div
                     class="inline-block py-1 px-3 bg-red-600/20 text-red-500 border border-red-500/30 rounded text-xs font-bold tracking-wider uppercase mb-4">
-                    Compra asesorada
+                    Haz tu pedido
                 </div>
-                <h2 class="text-4xl md:text-5xl font-bold text-white mb-2">PACK ACTIVACIÓN</h2>
-                <p class="text-gray-400 text-lg mb-8">Consulta si 24BURN calza con tu objetivo, tu rutina y tus
-                    condiciones personales.</p>
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-2">TU 24BURN</h2>
+                <p class="text-gray-400 text-lg mb-8">Confirma precio, disponibilidad y despacho de 24BURN antes de
+                    completar tu pedido.</p>
 
                 <div class="space-y-4 mb-8">
                     <div class="flex items-center gap-3 text-gray-300">
                         <div
                             class="w-6 h-6 rounded-full bg-green-500/20 text-green-500 flex items-center justify-center text-xs">
                             ✓</div>
-                        <span><strong>33 Porciones</strong> (Rinde +1 Mes)</span>
+                        <span><strong>33 porciones</strong> por envase</span>
                     </div>
                     <div class="flex items-center gap-3 text-gray-300">
                         <div
                             class="w-6 h-6 rounded-full bg-green-500/20 text-green-500 flex items-center justify-center text-xs">
                             ✓</div>
-                        <span><strong>Consulta precio y disponibilidad actual</strong></span>
+                        <span><strong>Confirma precio y disponibilidad actual</strong></span>
                     </div>
                     <div class="flex items-center gap-3 text-gray-300">
                         <div
@@ -267,31 +277,23 @@
                     <span class="text-sm text-gray-500">Precio informado. Confirma disponibilidad por WhatsApp.</span>
                 </div>
 
-                <a href="https://wa.me/56959744777?text=Hola%20Seba%2C%20quiero%20informaci%C3%B3n%20sobre%2024BURN.%20Busco%20apoyar%20mi%20rutina%20de%20entrenamiento%20y%20activaci%C3%B3n%20diaria.%20%C2%BFMe%20puedes%20orientar%3F"
+                <a href="https://wa.me/56959744777?text=Hola%20Seba%2C%20quiero%20hacer%20mi%20pedido%20de%2024BURN.%20%C2%BFMe%20ayudas%20a%20confirmar%20precio%2C%20disponibilidad%20y%20despacho%3F"
                     target="_blank" rel="noopener noreferrer"
                     class="cta-button w-full py-5 rounded-xl text-black font-bold text-center text-xl uppercase tracking-wider block hover:no-underline"
                     onclick="fbq('track', 'Contact'); fbq('trackCustom', 'click_whatsapp_24burn');">
-                    PEDIR ASESORÍA POR WHATSAPP
+                    QUIERO MI 24BURN
                 </a>
 
                 <p class="text-center text-xs text-gray-500 mt-4">
                     Confirmamos precio, disponibilidad y despacho directamente por WhatsApp.
                 </p>
 
-                <div class="mt-8 pt-6 border-t border-white/10 text-center">
-                    <a href="https://wa.me/56959744777?text=Hola%20Seba%2C%20quiero%20que%20me%20ayudes%20a%20elegir%20el%20producto%20FWP%20m%C3%A1s%20adecuado%20para%20mi%20objetivo."
-                        target="_blank" rel="noopener noreferrer"
-                        onclick="fbq('track', 'Contact'); fbq('trackCustom', 'click_whatsapp_asesoria');"
-                        class="text-gray-400 hover:text-[#94c120] text-sm underline transition-colors">
-                        ¿No sabes si es para ti? Pide orientación antes de comprar
-                    </a>
-                </div>
             </div>
         </div>
     </section>
 
     <!-- FAQ -->
-    <section class="py-24 px-4 bg-black">
+    <section class="py-24 px-4 bg-[#090d06]">
         <div class="max-w-3xl mx-auto">
             <h2 class="text-3xl font-bold text-center text-white mb-12">DUDAS COMUNES</h2>
 
@@ -348,7 +350,7 @@
 
     <!-- FOOTER -->
     <footer class="py-12 px-4 border-t border-white/10 text-center">
-        <p class="text-gray-600 text-sm mb-2">&copy; 2026 FWP Chile. Todos los derechos reservados.</p>
+        <p class="text-gray-600 text-sm mb-2">&copy; 2026 TuMejorVersion.org. Todos los derechos reservados.</p>
         <p class="text-gray-700 text-xs max-w-xl mx-auto">Suplemento alimenticio. No es medicamento. No reemplaza una
             alimentación balanceada. Consulta a un profesional de la salud si estás embarazada, en lactancia, tienes una
             condición médica, consumes medicamentos o tienes dudas sobre su consumo. Recomendado para adultos mayores de
@@ -359,11 +361,11 @@
 
     <!-- STICKY CTA MOBILE -->
     <div class="fixed bottom-0 left-0 w-full p-4 bg-black/90 backdrop-blur border-t border-white/10 md:hidden z-50">
-        <a href="https://wa.me/56959744777?text=Hola%20Seba%2C%20quiero%20informaci%C3%B3n%20sobre%2024BURN.%20Busco%20apoyar%20mi%20rutina%20de%20entrenamiento%20y%20activaci%C3%B3n%20diaria.%20%C2%BFMe%20puedes%20orientar%3F"
+        <a href="https://wa.me/56959744777?text=Hola%20Seba%2C%20quiero%20hacer%20mi%20pedido%20de%2024BURN.%20%C2%BFMe%20ayudas%20a%20confirmar%20precio%2C%20disponibilidad%20y%20despacho%3F"
             target="_blank" rel="noopener noreferrer"
             onclick="fbq('track', 'Contact'); fbq('trackCustom', 'click_whatsapp_24burn');"
             class="cta-button w-full py-3 rounded-lg text-black font-bold text-center uppercase block">
-            WHATSAPP 24BURN
+            QUIERO MI 24BURN
         </a>
     </div>
 

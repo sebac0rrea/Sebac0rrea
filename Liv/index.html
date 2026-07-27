@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LIV en Chile | Fibra, Probióticos y Bienestar Digestivo</title>
     <meta name="description"
-        content="LIV de FWP, suplemento en polvo sabor manzana verde con fibra, fructooligosacáridos y probióticos. Compra con asesoría por WhatsApp.">
+        content="LIV de FWP, suplemento en polvo sabor manzana verde con fibra, fructooligosacáridos y probióticos. Haz tu pedido por WhatsApp.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,8 +24,16 @@
 
         body {
             font-family: var(--font-body);
-            background-color: #050505;
+            background-color: #071110;
+            background-image:
+                radial-gradient(circle at 88% 12%, rgba(74, 191, 185, 0.14), transparent 32%),
+                radial-gradient(circle at 8% 68%, rgba(147, 197, 114, 0.07), transparent 36%),
+                linear-gradient(180deg, #0b1b1a 0%, #050a09 100%);
             color: #e5e5e5;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         h1,
@@ -106,7 +114,7 @@
 
     <!-- HERO SECTION -->
     <header class="relative min-h-screen flex items-center pt-24 pb-12 px-4 overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-black z-0"></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-[#12302e] via-[#0a1918] to-[#050908] z-0"></div>
         <div
             class="absolute right-0 top-0 w-2/3 h-full bg-[#4ABFB9] opacity-5 blur-[150px] rounded-full pointer-events-none">
         </div>
@@ -128,31 +136,27 @@
                         parte de una alimentación equilibrada.</span>
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="https://wa.me/56959744777?text=Hola%20Seba%2C%20quiero%20informaci%C3%B3n%20sobre%20LIV.%20Busco%20apoyar%20mi%20digesti%C3%B3n%20y%20sentirme%20m%C3%A1s%20liviano%2Fa.%20%C2%BFMe%20puedes%20orientar%3F"
-                        target="_blank" rel="noopener noreferrer"
-                        onclick="fbq('track', 'Contact'); fbq('trackCustom', 'click_whatsapp_liv');"
+                    <a href="#oferta"
                         class="cta-button py-4 px-8 rounded-lg text-black font-bold text-center uppercase tracking-wide text-lg">
-                        QUIERO ASESORÍA SOBRE LIV
+                        QUIERO MI LIV
                     </a>
-                    <p
-                        class="text-xs text-center sm:text-left text-gray-500 mt-2 sm:mt-0 flex items-center justify-center sm:justify-start gap-1">
-                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        Atención directa por WhatsApp
-                    </p>
                 </div>
             </div>
 
             <!-- Image -->
             <div class="relative flex justify-center">
-                <div class="absolute inset-0 bg-white/5 rounded-full blur-3xl transform scale-75"></div>
+                <div class="absolute inset-0 bg-[#4ABFB9]/10 rounded-full blur-3xl transform scale-75"></div>
                 <!-- Path adjusted to Image folder structure inside Liv -->
-                <img src="Images/liv.webp" alt="LIV sabor manzana verde de FWP Chile con fibra y probióticos"
-                    width="1600" height="1600"
-                    class="relative z-10 w-full max-w-md drop-shadow-2xl hover:scale-105 transition-transform duration-500">
+                <div
+                    class="relative z-10 w-full max-w-md overflow-hidden rounded-3xl border border-[#4ABFB9]/25 bg-gradient-to-br from-[#15302f] via-[#0d1d1c] to-[#060b0b] p-2 sm:p-3 shadow-2xl">
+                    <div class="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-[#4ABFB9]/15 blur-3xl"></div>
+                    <div class="relative overflow-hidden rounded-2xl bg-white/[0.04] ring-1 ring-[#4ABFB9]/10">
+                        <img src="Images/liv-doypack-chile-web.png"
+                            alt="Doypack LIV sabor manzana verde de FWP Chile con fibra y probióticos"
+                            width="1385" height="1000"
+                            class="w-full object-contain hover:scale-105 transition-transform duration-500">
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -218,40 +222,48 @@
     </section>
 
     <!-- OFFER SECTION -->
-    <section id="oferta" class="py-24 px-4 bg-gradient-to-b from-[#111] to-black">
+    <section id="oferta" class="py-24 px-4 bg-gradient-to-b from-[#0f2927] to-[#050a09]">
         <div
-            class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center bg-[#1a1a1a] rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+            class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center bg-[#111f1e] rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
 
             <!-- Product Showcase -->
-            <div class="p-10 md:p-16 flex items-center justify-center bg-white/5 relative">
+            <div
+                class="p-8 md:p-14 flex items-center justify-center bg-gradient-to-br from-[#132d2c] via-[#0b1b1a] to-black relative">
                 <div class="absolute inset-0 bg-[#4ABFB9] opacity-10 blur-3xl"></div>
-                <img src="Images/liv-presentacion.webp" alt="Presentación de LIV sabor manzana verde de FWP Chile"
-                    width="1600" height="1458" loading="lazy" decoding="async"
-                    class="relative z-10 w-full max-w-sm drop-shadow-2xl">
+                <div
+                    class="relative z-10 w-full max-w-sm overflow-hidden rounded-3xl border border-[#4ABFB9]/25 bg-[#0c1d1c] p-2 sm:p-3 shadow-2xl">
+                    <div class="absolute -right-12 -top-12 h-40 w-40 rounded-full bg-[#4ABFB9]/15 blur-3xl"></div>
+                    <div class="relative overflow-hidden rounded-2xl bg-white/[0.04] ring-1 ring-[#4ABFB9]/10">
+                        <img src="Images/liv-doypack-chile-web.png"
+                            alt="Doypack oficial de LIV sabor manzana verde para Chile"
+                            width="1385" height="1000" loading="lazy" decoding="async"
+                            class="w-full object-contain">
+                    </div>
+                </div>
             </div>
 
             <!-- Offer Details -->
             <div class="p-10 md:p-16 text-left">
                 <div
                     class="inline-block py-1 px-3 bg-red-600/20 text-red-500 border border-red-500/30 rounded text-xs font-bold tracking-wider uppercase mb-4">
-                    Compra asesorada
+                    Haz tu pedido
                 </div>
-                <h2 class="text-4xl md:text-5xl font-bold text-white mb-2">RUTINA DE LIGEREZA</h2>
-                <p class="text-gray-400 text-lg mb-8">Consulta si LIV calza con tu objetivo digestivo y tu rutina diaria.
-                </p>
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-2">TU LIV</h2>
+                <p class="text-gray-400 text-lg mb-8">Confirma precio, disponibilidad y despacho de LIV antes de
+                    completar tu pedido.</p>
 
                 <div class="space-y-4 mb-8">
                     <div class="flex items-center gap-3 text-gray-300">
                         <div
                             class="w-6 h-6 rounded-full bg-green-500/20 text-green-500 flex items-center justify-center text-xs">
                             ✓</div>
-                        <span><strong>LIV (280g)</strong> - Suministro Mensual</span>
+                        <span><strong>LIV (280 g)</strong> - 28 porciones por envase</span>
                     </div>
                     <div class="flex items-center gap-3 text-gray-300">
                         <div
                             class="w-6 h-6 rounded-full bg-green-500/20 text-green-500 flex items-center justify-center text-xs">
                             ✓</div>
-                        <span><strong>Consulta precio y disponibilidad actual</strong></span>
+                        <span><strong>Confirma precio y disponibilidad actual</strong></span>
                     </div>
                     <div class="flex items-center gap-3 text-gray-300">
                         <div
@@ -266,31 +278,23 @@
                     <span class="text-sm text-gray-500">Precio informado. Confirma disponibilidad por WhatsApp.</span>
                 </div>
 
-                <a href="https://wa.me/56959744777?text=Hola%20Seba%2C%20quiero%20informaci%C3%B3n%20sobre%20LIV.%20Busco%20apoyar%20mi%20digesti%C3%B3n%20y%20sentirme%20m%C3%A1s%20liviano%2Fa.%20%C2%BFMe%20puedes%20orientar%3F"
+                <a href="https://wa.me/56959744777?text=Hola%20Seba%2C%20quiero%20hacer%20mi%20pedido%20de%20LIV.%20%C2%BFMe%20ayudas%20a%20confirmar%20precio%2C%20disponibilidad%20y%20despacho%3F"
                     target="_blank" rel="noopener noreferrer"
                     class="cta-button w-full py-5 rounded-xl text-black font-bold text-center text-xl uppercase tracking-wider block hover:no-underline"
                     onclick="fbq('track', 'Contact'); fbq('trackCustom', 'click_whatsapp_liv');">
-                    PEDIR ASESORÍA POR WHATSAPP
+                    QUIERO MI LIV
                 </a>
 
                 <p class="text-center text-xs text-gray-500 mt-4">
                     Confirmamos precio, disponibilidad y despacho directamente por WhatsApp.
                 </p>
 
-                <div class="mt-8 pt-6 border-t border-white/10 text-center">
-                    <a href="https://wa.me/56959744777?text=Hola%20Seba%2C%20quiero%20que%20me%20ayudes%20a%20elegir%20el%20producto%20FWP%20m%C3%A1s%20adecuado%20para%20mi%20objetivo."
-                        target="_blank" rel="noopener noreferrer"
-                        onclick="fbq('track', 'Contact'); fbq('trackCustom', 'click_whatsapp_asesoria');"
-                        class="text-gray-400 hover:text-[#4ABFB9] text-sm underline transition-colors">
-                        ¿No sabes si es para ti? Pide orientación antes de comprar
-                    </a>
-                </div>
             </div>
         </div>
     </section>
 
     <!-- FAQ -->
-    <section class="py-24 px-4 bg-black">
+    <section class="py-24 px-4 bg-[#06100f]">
         <div class="max-w-3xl mx-auto">
             <h2 class="text-3xl font-bold text-center text-white mb-12">DUDAS COMUNES</h2>
 
@@ -303,7 +307,7 @@
                     </summary>
                     <div class="mt-4 text-gray-400 leading-relaxed">
                         Mezcla 1 scoop (10g) en un vaso de agua fría (200ml), revuelve bien y disfruta. Idealmente en
-                        cualquier momento de tu rutina, según la orientación recibida y tu tolerancia.
+                        cualquier momento de tu rutina, según tus hábitos y tolerancia.
                     </div>
                 </details>
 
@@ -348,7 +352,7 @@
 
     <!-- FOOTER -->
     <footer class="py-12 px-4 border-t border-white/10 text-center">
-        <p class="text-gray-600 text-sm mb-2">&copy; 2026 FWP Chile. Todos los derechos reservados.</p>
+        <p class="text-gray-600 text-sm mb-2">&copy; 2026 TuMejorVersion.org. Todos los derechos reservados.</p>
         <p class="text-gray-700 text-xs max-w-xl mx-auto">Suplemento alimenticio. No es medicamento. No reemplaza una
             alimentación balanceada. Consulta a un profesional de la salud si estás embarazada, en lactancia, tienes una
             condición médica, consumes medicamentos o tienes dudas sobre su consumo. Recomendado para adultos mayores de
@@ -357,11 +361,11 @@
 
     <!-- STICKY CTA MOBILE -->
     <div class="fixed bottom-0 left-0 w-full p-4 bg-black/90 backdrop-blur border-t border-white/10 md:hidden z-50">
-        <a href="https://wa.me/56959744777?text=Hola%20Seba%2C%20quiero%20informaci%C3%B3n%20sobre%20LIV.%20Busco%20apoyar%20mi%20digesti%C3%B3n%20y%20sentirme%20m%C3%A1s%20liviano%2Fa.%20%C2%BFMe%20puedes%20orientar%3F"
+        <a href="https://wa.me/56959744777?text=Hola%20Seba%2C%20quiero%20hacer%20mi%20pedido%20de%20LIV.%20%C2%BFMe%20ayudas%20a%20confirmar%20precio%2C%20disponibilidad%20y%20despacho%3F"
             target="_blank" rel="noopener noreferrer"
             onclick="fbq('track', 'Contact'); fbq('trackCustom', 'click_whatsapp_liv');"
             class="cta-button w-full py-3 rounded-lg text-black font-bold text-center uppercase block">
-            WHATSAPP LIV
+            QUIERO MI LIV
         </a>
     </div>
 
