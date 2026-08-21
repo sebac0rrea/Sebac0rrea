@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /Docs/
+
+Sitemap: https://tumejorversion.org/sitemap.xml
