@@ -447,6 +447,29 @@ tr:last-child td {
     font-size: 0.9rem;
 }
 
+.article-aside--liv {
+    overflow: hidden;
+    border: 1px solid rgba(74, 191, 185, 0.28);
+    border-top: 3px solid var(--teal);
+    background:
+        radial-gradient(circle at 85% 8%, rgba(74, 191, 185, 0.18), transparent 42%),
+        #0a1313;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+}
+
+.article-aside-product {
+    width: min(100%, 230px);
+    height: auto;
+    margin: -4px auto 20px;
+    object-fit: contain;
+    filter: drop-shadow(0 18px 18px rgba(0, 0, 0, 0.38));
+}
+
+.article-aside-actions {
+    display: grid;
+    gap: 10px;
+}
+
 .button {
     display: inline-flex;
     align-items: center;
@@ -462,8 +485,31 @@ tr:last-child td {
     text-decoration: none;
 }
 
+.button--liv {
+    background: linear-gradient(135deg, #62c8c3, #9de2de);
+    color: #041313;
+    box-shadow: 0 8px 22px rgba(74, 191, 185, 0.2);
+}
+
 .button--whatsapp {
     background: var(--whatsapp);
+    color: #041109;
+}
+
+.article-aside-actions .button {
+    width: 100%;
+    border: 1px solid transparent;
+    transition: transform 160ms ease, filter 160ms ease, box-shadow 160ms ease;
+}
+
+.article-aside-actions .button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+}
+
+.article-aside-actions .button:focus-visible {
+    outline: 3px solid rgba(255, 255, 255, 0.9);
+    outline-offset: 3px;
 }
 
 .site-footer {
