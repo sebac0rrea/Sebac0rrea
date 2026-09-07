@@ -496,6 +496,11 @@ tr:last-child td {
     color: #041109;
 }
 
+.button--renova {
+    background: var(--magenta);
+    color: #fff;
+}
+
 .article-aside-actions .button {
     width: 100%;
     border: 1px solid transparent;
